@@ -6,6 +6,7 @@ const durationTime = document.querySelector(".duration");
 const remainingTime = document.querySelector(".remaining");
 const rangeBar = document.querySelector(".range");
 const musicName = document.querySelector(".music-name");
+const singerName = document.querySelector(".singer-name");
 const musicImage = document.querySelector(".music-thumb img")
 const playRepeat = document.querySelector(".play-repeat"); 
 let timer;
@@ -138,9 +139,8 @@ function init(indexSong)
     song.setAttribute("src", `./music/${musics[indexSong].file}`);
     musicImage.setAttribute("src", musics[indexSong].image);
     musicName.textContent = musics[indexSong].title;
+    singerName.textContent = musics[indexSong].singer;
 }
 console.log(localStorage.getItem("songID"));
 init(indexSong);
 timer = setInterval(displayTimer, 500);
-
-// TABLE in bai_hat.html
