@@ -5,12 +5,12 @@
 body{
     box-sizing: border-box;
     height: 100%;
-    max-width: 100%;
+    min-width: 1100px;
     display: flex;
     flex-direction: column;
     font-size: 1em;
     font-family: Arial, Helvetica, sans-serif;
-    margin-left: 250px;
+    margin-left: 200px;
     margin-right: 50px;
     margin-top: 0px;
     background-color: #8EC5FC;
@@ -63,8 +63,8 @@ input[type=text] {
 
 /* Sidebar */
 .side-bar{
-    height: 100%;
-    width: 225px;
+    height: 70%;
+    width: 180px;
     position: fixed;
     z-index: 1;
     top: 0;
@@ -74,25 +74,50 @@ input[type=text] {
 }
 
 .side-bar a {
-    padding: 6px 8px 6px 16px;
-    text-decoration: none;
-    font-size: 20px;
-    color: #818181;
-    display: block;
-    padding-bottom: 5px;
-    margin-bottom: 10px;
-    border-radius: 10px;
-  }
+  padding: 6px 8px 6px 16px;
+  text-decoration: none;
+  font-size: 20px;
+  color: #818181;
+  padding-bottom: 5px;
+  margin-bottom: 10px;
+  border-radius: 10px;
+  display: flex;
+}
 .side-bar i{
-    margin-right: 20px;
-    position:static;
-    width: 10px;
+  margin-right: 20px;
+  width: 10px;
 }
+
 .side-bar a:hover {
-    color: #f1f1f1;
+  color: #f1f1f1;
 
 }
 
+/* Responsive sidebar */
+
+@media screen and (min-width: 180px) {
+  .sidebar {
+    width: 100%;
+    height: 50px;
+    position: relative;
+  }
+  .sidebar a {float: left;}
+  div.content {margin-left: 0;}
+}
+
+/* On screens that are less than 400px, display the bar vertically, instead of horizontally */
+@media screen and (max-width: 400px) {
+  .sidebar a {
+    text-align: center;
+    float: none;
+  }
+  .side-bar h4{
+    display: none;
+  }
+}
+
+
+/* end Responsive sidebar */
 .content
 {
   display: flex;
@@ -173,7 +198,11 @@ input[type=text] {
 {
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
+
 }
+
+
 
 .album-music{
   margin: 20px 15px;
@@ -320,3 +349,17 @@ footer
 {
   padding: 10px 0;
 }
+
+/* Scroll bar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  border-radius: 15px;
+}
+::-webkit-scrollbar-thumb {
+  background-color: #e2e6f5;
+  border-radius: 10px;
+}
+/* Scroll bar */
+
