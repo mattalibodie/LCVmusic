@@ -1,0 +1,55 @@
+.qc-form input[type=text],.qc-form input[type=password] {
+  display: block;
+  width: 100%;
+  padding: 14px;
+  border: none;
+  background: #f1f1f1;
+}
+
+input:focus {
+  outline: none;
+}
+
+.qc-form input[type=text]:focus,.qc-form input[type=password]:focus {
+  background: #ddd;
+}
+
+
+.qc-button button:hover {
+  opacity: 1;
+}
+
+a {
+  color: dodgerblue;
+}
+
+.qc-sign-in {
+  padding: 16px;
+  background-color: #f1f1f1;
+  text-align: center;
+}
+
+.qc-button button {
+  background-color: #04AA6D;
+  color: white;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  width: 49%;
+  opacity: 0.9;
+  display: inline;
+}
+
+.qc-button {
+  margin: 8px 0;
+  padding-left: 16px;
+}
+
+hr {
+  border: 1px solid #f1f1f1;
+  margin-bottom: 25px;
+}
+
+qc-form {
+  padding: 16px;
+}

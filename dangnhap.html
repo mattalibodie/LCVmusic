@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Đăng Nhập</title>
+    <link rel="stylesheet" href="./css/styles.css" />
+    <link rel="stylesheet" href="./css/gallery.css">
+    <link rel="stylesheet" href="./css/qc_form.css">
+    <link rel="icon" href="./image/shortcut_icon.png" />
+    <!-- Ionic icon -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+<style>
+
+.qc-button button {
+  display: block;
+  width: 100%;
+}
+
+.qc-button {
+  padding-left: 0;
+}
+
+.qc-login {
+  width: 50%;
+}
+
+hr {
+  border: 1px solid #f1f1f1;
+  margin-bottom: 25px;
+}
+
+</style>
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+    ></script>
+    <!-- AweSome Font -->
+    <script src="https://kit.fontawesome.com/2013436f4b.js" crossorigin="anonymous"></script>
+    <script src="./js/song.js"></script>
+    <script src="./js/app.js"></script>
+  </head>
+  <body>
+    <header>
+    <div class="side-bar">
+        <div class="account">
+            <a href="./dangnhap.html">
+                <i class="fa-solid fa-id-badge"></i>
+                <h4>Đăng Nhập</h4>
+            </a>
+            <a href="./dangky.html">
+                <i class="fa-solid fa-address-card"></i>
+                <h4>Đăng Ký</h4>
+            </a>
+        </div>
+        <div class="menu-list">
+            <a href="./bai_hat.html">
+                <i class="fa-brands fa-itunes-note"></i>
+                <h4>Bài Hát</h4>
+            </a>
+            <a href="#">
+                <i class="fa-solid fa-globe"></i>
+                <h4>Quốc Gia</h4>
+            </a>
+            <a href="#">
+                <i class="fa-brands fa-youtube"></i>
+                <h4>MV</h4>
+            </a>
+            <a href="nghe_si.html">
+                <i class="fa-solid fa-person"></i>
+                <h4>Nghệ Sĩ</h4>
+            </a>
+            <a href="#"><i class="fa-solid fa-compass"></i>
+                <h4>Khám Phá</h4>
+            </a>
+            <a href="#"><i class="fa-solid fa-address-book"></i>
+                <h4>Liên Hệ</h4>
+            </a>
+        </div>
+    </div>
+      </header>
+      <main>
+        <!-- ******** -->
+        
+        <div class="qc-login">
+        <form method="post" enctype="application/x-www-form-urlencoded">
+          <fieldset>
+            <legend><h1>Đăng Nhập</h1></legend>
+            <div class="qc-form">
+              <hr>
+              <label for="email"><b>Email:</b></label>
+              <input type="text" placeholder="Vui lòng nhập email" name="email" id="email">
+
+              <label for="psw"><b>Mật khẩu:</b></label>
+              <input type="password" placeholder="Vui lòng nhập mật khẩu" name="psw" id="psw">
+
+              <div class="qc-button">
+                <button type="submit">Đăng Nhập</button>
+              </div>
+
+             </div> 
+
+              <div>
+                <a href="">Quên mật khẩu?</a>
+              </div>
+          </fieldset>
+        </form>
+        </div>
+               
+	      
+        <!-- ****** -->   
+      </main>
+      <footer>
+          <p>Bản quyền thuộc về nhóm 8 - CT188-06</p>
+          <p>Các Thành Viên: Nguyễn Đặng Quốc Cường - Nguyễn Hải Lương - Huỳnh Long Vân</p>
+          <p>Do not copyright &copy</p>
+      </footer>
+  </body>
+</html>
