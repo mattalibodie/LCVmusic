@@ -76,4 +76,47 @@ const musics = [ // Cập Nhật Nhạc
         file: "MuonRoiMaSaoCon-SonTungMTP-7011803.mp3",
         image: "image/album/muon_roi_ma_sao_con.jpg"
     },
+    {
+        id: 11,
+        title: "Anh Nhớ Ra",
+        singer: "Vũ feat. Trang",
+        file: "anh_nho_ra_feat_trang.mp3",
+        image: "image/album/mot_van_nam.jpg"
+    },
+    {
+        id: 12,
+        title: "Cô Ta",
+        singer: "Vũ",
+        file: "co_ta.mp3",
+        image: "image/album/mot_van_nam.jpg"
+    },
+    {
+        id: 13,
+        title: "Bước Qua Nhau",
+        singer: "Vũ",
+        file: "buoc_qua_nhau.mp3",
+        image: "image/album/buocquanhau.jpg"
+    },
+    {
+        id: 14,
+        title: "Bước Qua Mùa Cô Đơn",
+        singer: "Vũ",
+        file: "buoc_qua_mua_co_don.mp3",
+        image: "image/album/buocquamuacodon.jpg"
+    },
+    {
+        id: 15,
+        title: "Chợt Nhìn Nhau",
+        singer: "Vũ",
+        file: "chot_nhin_nhau.mp3",
+        image: "image/album/mot_van_nam.jpg"
+    },
+    {
+        id: 16,
+        title: "Thích Em Hơi Nhiều",
+        singer: "Wren Evans",
+        file: "ThichEmHoiNhieu-WrenEvans-7034969.mp3",
+        image: "image/album/thichEmHoiNhieu.jpg"
+    },
+
 ];
