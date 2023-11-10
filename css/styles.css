@@ -69,25 +69,33 @@ input[type=text] {
 
 /* Sidebar */
 .side-bar{
-    height: 70%;
-    width: 180px;
+    height: 100%;
+    width: 190px;
     position: fixed;
     z-index: 1;
     top: 0;
     left: 0;
     overflow-x: hidden;
     padding-top: 50px;
+    margin-left: 10px;
+}
+
+.account{
+  border-bottom: solid #afc6cf 2px;
+  margin-bottom: 8px;
 }
 
 .side-bar a {
   padding: 6px 8px 6px 16px;
   text-decoration: none;
   font-size: 20px;
-  color: #818181;
-  padding-bottom: 5px;
-  margin-bottom: 10px;
-  border-radius: 10px;
+  color: #f0ebf4;
+  padding-bottom: 10px;
+  width: 95%;
+  margin-bottom: 15px;
+  border-radius: 15px;
   display: flex;
+  background-color: #A1C3D1 ;
 }
 .side-bar i{
   margin-right: 20px;
@@ -95,33 +103,8 @@ input[type=text] {
 }
 
 .side-bar a:hover {
-  color: #f1f1f1;
-
+  color: #B39BC8;
 }
-
-/* Responsive sidebar */
-
-@media screen and (min-width: 180px) {
-  .sidebar {
-    width: 100%;
-    height: 50px;
-    position: relative;
-  }
-  .sidebar a {float: left;}
-  div.content {margin-left: 0;}
-}
-
-/* On screens that are less than 400px, display the bar vertically, instead of horizontally */
-@media screen and (max-width: 400px) {
-  .sidebar a {
-    text-align: center;
-    float: none;
-  }
-  .side-bar h4{
-    display: none;
-  }
-}
-
 
 /* end Responsive sidebar */
 .content
@@ -205,10 +188,7 @@ input[type=text] {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-
 }
-
-
 
 .album-music{
   margin: 20px 15px;
@@ -259,8 +239,9 @@ input[type=text] {
 .music {
   position: relative;
   border-radius: 12px;
-  background-color: #E0C3FC;
+  background-color: #f8bcd1;
   margin: 20px;
+  padding: 10px;
 }
 .music-thumb {
   width: 100px;
@@ -286,9 +267,9 @@ input[type=text] {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  font-size: 14px;
   color: #999;
   margin-bottom: 10px;
+  padding-left: 10px;
 }
 .controls {
   display: flex;
@@ -331,7 +312,7 @@ input[type=text] {
   -webkit-appearance: none; /* Hides the slider so that custom slider can be made */
   width: 100%; /* Specific width is required for Firefox. */
   background: transparent; /* Otherwise white in Chrome */
-  margin-bottom: 40px;
+  margin-bottom: 20px;
   margin-top: 30px;
   padding-top: 20px;
 }
@@ -353,6 +334,7 @@ input[type=text] {
 /* Footer */  
 footer
 {
+  display: block;
   padding: 10px 0;
 }
 
@@ -430,12 +412,6 @@ hr {
   margin-bottom: 15px;
 }
 
-footer {
-  position: absolute;
-  bottom: 0;
-}
-
-
 html {
   position: relative;
   min-height: 100vh;
@@ -444,3 +420,5 @@ html {
 body {
   padding-bottom: 2.5rem;
 }
+
+/* Nghe Si */

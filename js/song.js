@@ -22,10 +22,10 @@ const musics = [ // Cập Nhật Nhạc
     },
     {
         id: 3,
-        title: "Vườn Nhà",
-        singer: "Phan Mạnh Quỳnh",
-        file: "VuonNha-PhanManhQuynh-9777057.mp3",
-        image: "image/album/demo_vuon_nha.jpg"
+        title: "Lạ Lùng",
+        singer: "Vũ",
+        file: "la_lung.mp3",
+        image: "image/album/la_lung.jpg"
     },
     {
         id: 4,
