@@ -132,7 +132,6 @@ function playSong(thisSong){
     window.location.href = "playsong.html";
 }
 
-
 function init(indexSong)
 {
     displayTimer();
@@ -141,6 +140,5 @@ function init(indexSong)
     musicName.textContent = musics[indexSong].title;
     singerName.textContent = musics[indexSong].singer;
 }
-console.log(localStorage.getItem("songID"));
 init(indexSong);
 timer = setInterval(displayTimer, 500);
