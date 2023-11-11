@@ -116,48 +116,51 @@ input[type=text] {
 
 /* Gallery */
 
-.slider{
-  float: left;
-  width: 800px;
-  height: 400px;
-  margin: auto;
+img.slide {
+  width: 710px;
+  height: 90%;
+  object-fit: cover;
+}
+
+img.slide:not(:first-child) {
+  display: none;
+}
+
+.container {
+  width: 710px;
+  height: 460px;
+  margin: 0 auto;
   position: relative;
-  overflow: hidden;
+  padding: 5px;
 }
-.slider .list{
+
+/* 2 button change slide: prev and next */
+.btn-change {
   position: absolute;
-  height: 100%;
-  left: 0;
-  top: 0;
-  display: flex;
-  transition: 1s;
-}
-.slider .list img{
-  width: 800px;
-  height: 400px;
-  object-fit: fill;
-}
-.slider .buttons{
-  position: absolute;
-  top: 45%;
-  left: 5%;
-  width: 90%;
-  display: flex;
-  justify-content: space-between;
-}
-.slider .buttons button{
-  width: 50px;
-  height: 50px;
+  top: 50%;
+  transform: translateY(-100%);
+  width: 40px;
+  height: 40px;
   border-radius: 50%;
-  background-color: #fff5;
-  color: #fff;
+  background-color: #f0b9cd;
+  color: #f89ccd;
   border: none;
   font-family: monospace;
   font-weight: bold;
 }
-.slider .dots{
+
+#next {
+  right: 10px;;
+}
+
+#prev {
+  left: 10px;
+}
+
+/* 4 button corresponding to 4 image */
+.change-img {
   position: absolute;
-  bottom: 10px;
+  bottom: 50px;
   left: 0;
   color: #fff;
   width: 100%;
@@ -166,7 +169,9 @@ input[type=text] {
   display: flex;
   justify-content: center;
 }
-.slider .dots li{
+
+button {
+  display: inline;
   list-style: none;
   width: 10px;
   height: 10px;
@@ -175,11 +180,11 @@ input[type=text] {
   border-radius: 20px;
   transition: 0.5s;
 }
-.slider .dots li.active{
+
+button.active {
   width: 30px;
+  color: white;
 }
-
-
 
 /* ******* */
 

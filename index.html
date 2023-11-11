@@ -1,34 +1,23 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <!-- Required meta tags -->
+
+<head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>LCV - Online Music Player</title>
     <link rel="stylesheet" href="./css/styles.css" />
-    <link rel="stylesheet" href="./css/gallery.css">
     <link rel="icon" href="./image/shortcut_icon.png" />
-    <!-- Ionic icon -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap"
-      rel="stylesheet"
-    />
-    <script
-      type="module"
-      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
-    ></script>
-    <script
-      nomodule
-      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
-    ></script>
-    <!-- AweSome Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet" />
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
     <script src="https://kit.fontawesome.com/2013436f4b.js" crossorigin="anonymous"></script>
-    <script src="./js/song.js"></script>
-    <script src="./js/app.js"></script>
-  </head>
-  <body>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <!-- <script src="./js/app.js"></script> -->
+</head>
+
+<body>
     <div class="side-bar">
         <div class="account">
             <a href="./dangnhap.html">
@@ -64,223 +53,231 @@
     <header>
         <div class="search-box">
             <a href=""><i class="fa-solid fa-magnifying-glass"></i></a>
-            <div class="search-container">  
-              <form method="get" action="#">
-                <div class="input-container">
-                  <input
-                    id="search"
-                    class="search-input"
-                    type="text"
-                    placeholder="Nhập nội dung cần tìm... "
-                    name="search"
-                  />
-                </div>
-              </form>
+            <div class="search-container">
+                <form method="get" action="#">
+                    <div class="input-container">
+                        <input id="search" class="search-input" type="text" placeholder="Nhập nội dung cần tìm... "
+                            name="search" />
+                    </div>
+                </form>
             </div>
         </div>
-      </header>
-      <main>
+    </header>
+    <main>
         <!-- ******** -->
         <div class="content">
-            <div class="slider">
-                <div class="list">
-                    <div class="item">
-                        <img src="./image/slide_show/gallery.jpg" alt="">
-                    </div>
-                    <div class="item">
-                        <img src="./image/slide_show/gallery2.jpg" alt="">
-                    </div>
-                    <div class="item">
-                        <img src="./image/slide_show/gallery3.jpg" alt="">
-                    </div>
-                    <div class="item">
-                        <img src="./image/slide_show/gallery4.jpg" alt="">
-                    </div>
-                    <div class="item">
-                        <img src="./image/slide_show/gallery5.jpg" alt="">
-                    </div>
+            <div class="container">
+                <img class="slide" src="./image/slide_show/gallery.jpg" idx="0" alt="">
+                <img class="slide" src="./image/slide_show/gallery1.jpg" idx="1" alt="">
+                <img class="slide" src="./image/slide_show/gallery2.jpg" idx="2" alt="">
+                <img class="slide" src="./image/slide_show/gallery3.jpg" idx="3" alt="">
+                <ion-icon class="btn-change" id="next" name="caret-forward-outline"></ion-icon>
+                <ion-icon class="btn-change" id="prev" name="caret-back-outline"></ion-icon>
+                <div class="change-img">
+                    <button class="active" idx="0"></button>
+                    <button idx="1"></button>
+                    <button idx="2"></button>
+                    <button idx="3"></button>
                 </div>
-                <div class="buttons">
-                    <button id="prev"><</button>
-                    <button id="next">></button>
-                </div>
-                <ul class="dots">
-                    <li class="active"></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                </ul>
             </div>
-                <script src="./js/gallery.js"></script>
-              <!-- ****** -->
-                <div class="bxh">
+            <div class="bxh">
                 <ul>Gợi Ý</ul>
-                    <li><a href="#">
+                <li>
+                    <a href="#">
                         <h4>Making My Way</h4>
                         <p>Sơn Tùng M-TP</p>
                     </a>
                 </li>
-                    <li><a href="#">
+                <li>
+                    <a href="#">
                         <h4>Từng Quen</h4>
                         <p>Wren Evans</p>
                     </a>
                 </li>
-                    <li><a href="#">
+                <li>
+                    <a href="#">
                         <h4>Đợi (2023)</h4>
                         <p>Vũ</p>
                     </a>
                 </li>
-                    <li><a href="#">
+                <li>
+                    <a href="#">
                         <h4></h4>
                         <p></p>
                     </a>
-                </li> 
-            </li>
-            <li><a href="#">
-                <h4></h4>
-                <p></p>
+                </li>
+                <li>
+                    <a href="#">
+                        <h4></h4>
+                        <p></p>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <h4></h4>
+                        <p></p>
+                    </a>
+                </li>
+            </div>
+        </div>
+        <script src="./js/gallery.js"></script>
+        <!-- ****** -->
+
+        <!-- ****** -->
+        <div class="theloai">
+            <h3>Nhạc Việt</h3>
+        </div>
+        <div class="playlist">
+            <a href="#" onclick="playSong(this)" id="0" class="album-music">
+                <div class="album-thumb">
+                    <img src="./image/album/demo_making_my_way.jpg" alt="">
+                </div>
+                <div class="text-info">
+                    <div class="songName">
+                        <h4>Making My Way</h4>
+                    </div>
+                    <div class="singer">Sơn Tùng M-TP</div>
+                </div>
             </a>
-        </li>          
-    </li>
-        <li><a href="#">
-            <h4></h4>
-            <p></p>
-        </a>
-    </li>     
-    </div>
-</div>       
-              <!-- ****** -->
-              <div class="theloai">
-                <h3>Nhạc Việt</h3>
-            </div>
-            <div class="playlist">
-                <a href="#" onclick="playSong(this)" id="0" class="album-music">
-                    <div class="album-thumb">
-                        <img src="./image/album/demo_making_my_way.jpg" alt="">
-                    </div>
+            <a href="#" onclick="playSong(this)" id="1" class="album-music">
+                <div class="album-thumb">
+                    <img src="./image/album/troThanhPhuThue.jpg" alt="">
+                </div>
                 <div class="text-info">
-                    <div class="songName"><h4>Making My Way</h4></div>
+                    <div class="songName">
+                        <h4>Trở Thành Phu Thuê</h4>
+                    </div>
+                    <div class="singer">Hương Ly</div>
+                </div>
+
+            </a>
+            <a href="#" onclick="playSong(this)" id="2" class="album-music">
+                <div class="album-thumb">
+                    <img src="./image/album/demo_vu_doi_2023.jpg" alt="">
+                </div>
+                <div class="text-info">
+                    <div class="songName">
+                        <h4>Đợi (2023 remake)</h4>
+                    </div>
                     <div class="singer">Sơn Tùng M-TP</div>
                 </div>
-                </a>
-                <a href="#" onclick="playSong(this)" id="1" class="album-music">
-                    <div class="album-thumb">
-                        <img src="./image/album/troThanhPhuThue.jpg" alt="">
-                    </div>
-                    <div class="text-info">
-                        <div class="songName"><h4>Trở Thành Phu Thuê</h4></div>
-                        <div class="singer">Hương Ly</div>
-                    </div>
-    
-                </a>
-                <a href="#" onclick="playSong(this)" id="2" class="album-music">
-                    <div class="album-thumb">
-                        <img src="./image/album/demo_vu_doi_2023.jpg" alt="">
-                    </div>
-                    <div class="text-info">
-                        <div class="songName"><h4>Đợi (2023 remake)</h4></div>
-                        <div class="singer">Sơn Tùng M-TP</div>
-                    </div>
-                </a>
-                <a href="#" onclick="playSong(this)" id="8" class="album-music">
-                    <div class="album-thumb">
-                        <img src="./image/album/co_chac_yeu_la_day.png" alt="">
-                    </div>
-                    <div class="text-info">
-                        <div class="songName"><h4>Có Chắc Yêu Là Đây</h4></div>
-                        <div class="singer">Sơn Tùng M-TP</div>
-                    </div>
-                </a>
-                <a href="#" onclick="playSong(this)" id="4" class="album-music">
-                    <div class="album-thumb">
-                        <img src="./image/album/demo_tungquen.jpg" alt="">
-                    </div>
-                    <div class="text-info">
-                        <div class="songName"><h4>Từng Quen</h4></div>
-                        <div class="singer">Wren Evans</div>
-                    </div>
-                </a>
-
-                <a href="#" onclick="playSong(this)" id="5" class="album-music">
-                    <div class="album-thumb">
-                        <img src="./image/album/cafe-min.png" alt="">
-                    </div>
-                    <div class="text-info">
-                        <div class="songName"><h4>Cà Phê</h4></div>
-                        <div class="singer">Min</div>
-                    </div>
-                </a>
-
-            </div>
-            <div class="theloai">
-                <h3>Nhạc Việt</h3>
-            </div>
-            <div class="playlist">
-                <a href="javascript:getId(3);" class="album-music">
-                    <div class="album-thumb">
-                        <img src="./image/album/demo_making_my_way.jpg" alt="">
-                    </div>
+            </a>
+            <a href="#" onclick="playSong(this)" id="8" class="album-music">
+                <div class="album-thumb">
+                    <img src="./image/album/co_chac_yeu_la_day.png" alt="">
+                </div>
                 <div class="text-info">
-                    <div class="songName"><h4>Making My Way</h4></div>
+                    <div class="songName">
+                        <h4>Có Chắc Yêu Là Đây</h4>
+                    </div>
                     <div class="singer">Sơn Tùng M-TP</div>
                 </div>
-                </a>
-                <a href="javascript:getId(3);" class="album-music" id="2">
-                    <div class="album-thumb">
-                        <img src="./image/album/demo_making_my_way.jpg" alt="">
+            </a>
+            <a href="#" onclick="playSong(this)" id="4" class="album-music">
+                <div class="album-thumb">
+                    <img src="./image/album/demo_tungquen.jpg" alt="">
+                </div>
+                <div class="text-info">
+                    <div class="songName">
+                        <h4>Từng Quen</h4>
                     </div>
-                    <div class="text-info">
-                        <div class="songName"><h4>Making My Way</h4></div>
-                        <div class="singer">Sơn Tùng M-TP</div>
-                    </div>
-                </a>
-                <a href="javascript:getId(3);" class="album-music" id="3">
-                    <div class="album-thumb">
-                        <img src="./image/album/demo_making_my_way.jpg" alt="">
-                    </div>
-                    <div class="text-info">
-                        <div class="songName"><h4>Making My Way</h4></div>
-                        <div class="singer">Sơn Tùng M-TP</div>
-                    </div>
-                </a>
-                <a href="javascript:getId(3);" class="album-music">
-                    <div class="album-thumb">
-                        <img src="./image/album/demo_making_my_way.jpg" alt="">
-                    </div>
-                    <div class="text-info">
-                        <div class="songName"><h4>Making My Way</h4></div>
-                        <div class="singer">Sơn Tùng M-TP</div>
-                    </div>
-                </a>
-                <a href="javascript:getId(3);" class="album-music">
-                    <div class="album-thumb">
-                        <img src="./image/album/demo_making_my_way.jpg" alt="">
-                    </div>
-                    <div class="text-info">
-                        <div class="songName"><h4>Making My Way</h4></div>
-                        <div class="singer">Sơn Tùng M-TP</div>
-                    </div>
-                </a>
-                <a href="javascript:getId(3);" class="album-music">
-                    <div class="album-thumb">
-                        <img src="./image/album/demo_making_my_way.jpg" alt="">
-                    </div>
-                    <div class="text-info">
-                        <div class="songName"><h4>Making My Way</h4></div>
-                        <div class="singer">Sơn Tùng M-TP</div>s
-                    </div>
-                </a>
-            </div>
+                    <div class="singer">Wren Evans</div>
+                </div>
+            </a>
 
-        <!--  -->        
-      </main>
-      <footer>
-          <p>Bản quyền thuộc về nhóm 8 - CT188-06</p>
-          <p>Các Thành Viên: Nguyễn Đặng Quốc Cường - Nguyễn Hải Lương - Huỳnh Long Vân</p>
-          <p>Do not copyright &copy</p>
-      </footer>
+            <a href="#" onclick="playSong(this)" id="5" class="album-music">
+                <div class="album-thumb">
+                    <img src="./image/album/cafe-min.png" alt="">
+                </div>
+                <div class="text-info">
+                    <div class="songName">
+                        <h4>Cà Phê</h4>
+                    </div>
+                    <div class="singer">Min</div>
+                </div>
+            </a>
 
-  </body>
+        </div>
+        <div class="theloai">
+            <h3>Nhạc Việt</h3>
+        </div>
+        <div class="playlist">
+            <a href="javascript:getId(3);" class="album-music">
+                <div class="album-thumb">
+                    <img src="./image/album/demo_making_my_way.jpg" alt="">
+                </div>
+                <div class="text-info">
+                    <div class="songName">
+                        <h4>Making My Way</h4>
+                    </div>
+                    <div class="singer">Sơn Tùng M-TP</div>
+                </div>
+            </a>
+            <a href="javascript:getId(3);" class="album-music" id="2">
+                <div class="album-thumb">
+                    <img src="./image/album/demo_making_my_way.jpg" alt="">
+                </div>
+                <div class="text-info">
+                    <div class="songName">
+                        <h4>Making My Way</h4>
+                    </div>
+                    <div class="singer">Sơn Tùng M-TP</div>
+                </div>
+            </a>
+            <a href="javascript:getId(3);" class="album-music" id="3">
+                <div class="album-thumb">
+                    <img src="./image/album/demo_making_my_way.jpg" alt="">
+                </div>
+                <div class="text-info">
+                    <div class="songName">
+                        <h4>Making My Way</h4>
+                    </div>
+                    <div class="singer">Sơn Tùng M-TP</div>
+                </div>
+            </a>
+            <a href="javascript:getId(3);" class="album-music">
+                <div class="album-thumb">
+                    <img src="./image/album/demo_making_my_way.jpg" alt="">
+                </div>
+                <div class="text-info">
+                    <div class="songName">
+                        <h4>Making My Way</h4>
+                    </div>
+                    <div class="singer">Sơn Tùng M-TP</div>
+                </div>
+            </a>
+            <a href="javascript:getId(3);" class="album-music">
+                <div class="album-thumb">
+                    <img src="./image/album/demo_making_my_way.jpg" alt="">
+                </div>
+                <div class="text-info">
+                    <div class="songName">
+                        <h4>Making My Way</h4>
+                    </div>
+                    <div class="singer">Sơn Tùng M-TP</div>
+                </div>
+            </a>
+            <a href="javascript:getId(3);" class="album-music">
+                <div class="album-thumb">
+                    <img src="./image/album/demo_making_my_way.jpg" alt="">
+                </div>
+                <div class="text-info">
+                    <div class="songName">
+                        <h4>Making My Way</h4>
+                    </div>
+                    <div class="singer">Sơn Tùng M-TP</div>s
+                </div>
+            </a>
+        </div>
+
+        <!--  -->
+    </main>
+    <footer>
+        <p>Bản quyền thuộc về nhóm 8 - CT188-06</p>
+        <p>Các Thành Viên: Nguyễn Đặng Quốc Cường - Nguyễn Hải Lương - Huỳnh Long Vân</p>
+        <p>Do not copyright &copy</p>
+    </footer>
+
+</body>
+
 </html>
-

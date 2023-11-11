@@ -1,37 +1,49 @@
-let slider = document.querySelector('.slider .list');
-let items = document.querySelectorAll('.slider .list .item');
-let next = document.getElementById('next');
-let prev = document.getElementById('prev');
-let dots = document.querySelectorAll('.slider .dots li');
+var interval;
+$(document).ready(function () {
+    var stt = 0;
+    var endImg = $("img.slide:last").attr("idx");
 
-let lengthItems = items.length - 1;
-let active = 0;
-next.onclick = function(){
-    active = active + 1 <= lengthItems ? active + 1 : 0;
-    reloadSlider();
-}
-prev.onclick = function(){
-    active = active - 1 >= 0 ? active - 1 : lengthItems;
-    reloadSlider();
-}
-let refreshInterval = setInterval(()=> {next.click()}, 3000);
-function reloadSlider(){
-    slider.style.left = -items[active].offsetLeft + 'px';
-    let last_active_dot = document.querySelector('.slider .dots li.active');
-    last_active_dot.classList.remove('active');
-    dots[active].classList.add('active');
-    clearInterval(refreshInterval);
-    refreshInterval = setInterval(()=> {next.click()}, 3000);
+    $("button").click(function () {
+        stt = $(this).attr("idx");
 
-}
+        changeImg(stt);
+    });
 
-dots.forEach((li, key) => {
-    li.addEventListener('click', ()=>{
-         active = key;
-         reloadSlider();
-    })
-})
-window.onresize = function(event) {
-    reloadSlider();
+    $("#next").click(function () {
+        if (++stt > endImg) {
+            stt = 0;
+        }
+
+        changeImg(stt);
+    });
+
+    $("#prev").click(function () {
+        if (--stt < 0) {
+            stt = endImg;
+        }
+
+        changeImg(stt);
+    });
+
+
+    var timer = function () {
+        interval = setInterval(function () {
+            $("#next").click();
+        }, 5000);
+    };
+    timer();
+});
+
+
+//Hide all image slide and show image have index "stt"
+//Remove active all buttton and set "active" for button have index "stt"
+//Reset timer when change image
+function changeImg(stt) {
+    $("img.slide").hide();
+    $("img.slide").eq(stt).fadeIn(500);
+    $("button").removeClass("active");
+    $("button").eq(stt).addClass("active");
+
+    clearInterval(interval);
+    timer();
 };
-
