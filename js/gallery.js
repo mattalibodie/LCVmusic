@@ -1,4 +1,4 @@
-var interval;
+
 $(document).ready(function () {
     var stt = 0;
     var endImg = $("img.slide:last").attr("idx");
@@ -25,7 +25,7 @@ $(document).ready(function () {
         changeImg(stt);
     });
 
-
+    var interval;
     var timer = function () {
         interval = setInterval(function () {
             $("#next").click();
@@ -43,7 +43,6 @@ function changeImg(stt) {
     $("img.slide").eq(stt).fadeIn(500);
     $("button").removeClass("active");
     $("button").eq(stt).addClass("active");
-
     clearInterval(interval);
     timer();
 };
