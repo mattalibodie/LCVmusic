@@ -160,11 +160,11 @@ img.slide:not(:first-child) {
   width: 40px;
   height: 40px;
   border-radius: 50%;
-  background-color: #f0b9cd;
-  color: #f89ccd;
+  color: #9b9b9b;
   border: none;
   font-family: monospace;
   font-weight: bold;
+  cursor: pointer;
 }
 
 #next {
@@ -257,20 +257,23 @@ img.slide:not(:first-child) {
   counter-increment: item;
   position: absolute;
   top: 10px;
-  right: 20px;
+  right: 3px;
   font-size: 2rem;
 
 }
 
-.bxh p {
+.bxh p{
   font-size: 15px;
   padding-top: 10px;
 }
 
-.bxh a,
-p,
-li::before {
+.bxh h4, .bxh a, p, li::before {
   color: #6d6d6d;
+
+}
+
+li h4:hover, li p:hover{
+  cursor: pointer;
 }
 
 .title {
@@ -405,7 +408,10 @@ li::before {
 /* Footer */
 footer {
   display: block;
-  padding: 10px 0;
+  padding: 15px auto;
+  text-align: center;
+  font-weight: 600;
+  margin-top: 10px;
 }
 
 /* Scroll bar */
@@ -467,10 +473,6 @@ a {
   opacity: 0.9;
   display: inline;
   margin-bottom: 0;
-}
-
-.qc-button {
-  /* padding-left: 16px; */
 }
 
 hr {
