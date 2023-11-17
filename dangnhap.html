@@ -1,138 +1,103 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Đăng Nhập</title>
-    <link rel="stylesheet" href="./css/styles.css" />
-    <link rel="icon" href="./image/shortcut_icon.png" />
-    <!-- Ionic icon -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap"
-      rel="stylesheet"
-    />
-<style>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" href="./image/shortcut_icon.png" />
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  <link rel="preconnect" href="https://fonts.googleapis.com" /> <!-- Google Font -->
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <script src="./js/jquery-3.7.1.min.js"></script>
+  <!-- loading screen css -->
+  <link rel="stylesheet" href="./css/loading.css">
+  <script src="./js/script.js"></script>
+  <script src="./js/gallery.js"></script>
+  <link rel="stylesheet" href="./css/styles.css">
+  <title>LCV Music</title>
+</head>
 
-.qc-button button {
-  display: block;
-  width: 100%;
-}
+<body>
 
-
-.qc-login {
-  width: 50%;
-}
-
-hr {
-  border: 1px solid #f1f1f1;
-  margin-bottom: 25px;
-}
-
-</style>
-    <script
-      type="module"
-      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
-    ></script>
-    <script
-      nomodule
-      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
-    ></script>
-    <!-- AweSome Font -->
-    <script src="https://kit.fontawesome.com/2013436f4b.js" crossorigin="anonymous"></script>
-  </head>
-  <body>
-    <div class="side-bar">
-      <div class="logo">
-        <img src="./image/logo.jpg" alt="day la logo" id="main-logo">
-        <h3>Đây là logo</h3>
-    </div>
-      <div class="account">
-          <a href="./dangnhap.html">
-              <i class="fa-solid fa-id-badge"></i>
-              <h4>Đăng Nhập</h4>
-          </a>
-          <a href="./dangky.html">
-              <i class="fa-solid fa-address-card"></i>
-              <h4>Đăng Ký</h4>
-          </a>
-      </div>
-      <div class="menu-list">
-          <a href="./bai_hat.html">
-              <i class="fa-brands fa-itunes-note"></i>
-              <h4>Bài Hát</h4>
-          </a>
-          <a href="#">
-              <i class="fa-solid fa-globe"></i>
-              <h4>Quốc Gia</h4>
-          </a>
-          <a href="#">
-              <i class="fa-brands fa-youtube"></i>
-              <h4>MV</h4>
-          </a>
-          <a href="#"><i class="fa-solid fa-compass"></i>
-              <h4>Khám Phá</h4>
-          </a>
-          <a href="#"><i class="fa-solid fa-address-book"></i>
-              <h4>Liên Hệ</h4>
-          </a>
-      </div>
-  </div>
+  <main>
+    <!-- ******** -->
     <header>
-        <div class="search-box">
-            <a href=""><i class="fa-solid fa-magnifying-glass"></i></a>
-            <div class="search-container">  
-              <form method="get" action="#">
-                <div class="input-container">
-                  <input
-                    id="search"
-                    class="search-input"
-                    type="text"
-                    placeholder="Nhập nội dung cần tìm... "
-                    name="search"
-                  />
-                </div>
-              </form>
+      <nav class="navbar navbar-dark navbar-expand-md bg-transparent ">
+          <div class="container-fluid">
+            <a class="navbar-brand" href="#">
+              <img src="./image/music-svgrepo-com.svg" alt="" width="50px" height="50px">LCV MUSIC
+            </a>
+            <!-- BUTTON -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="sidebar offcanvas offcanvas-start" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+              <!-- Sidebar header -->
+              <div class="offcanvas-header text-white border-botton">
+                <h5 class="offcanvas-title" id="offcanvasNavbarLabel"><img src="./image/music-svgrepo-com.svg" alt="" width="50px" height="50px">LCV MUSIC</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+              </div>
+              <div class="offcanvas-body d-flex flex-column flex-lg-row p-4 pg-lg-0">
+                  <ul class="navbar-nav justify-content-center align-items-center fs-5 flex-grow-1 pe-3">
+                      <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="./index.html">Trang Chủ</a>
+                      </li>
+                      <li class="nav-item mx-2">
+                        <a class="nav-link " href="./bai_hat.html">Bài Hát</a>
+                      </li>
+                      <li class="nav-item mx-2">
+                        <a class="nav-link" href="#">Quốc Gia</a>
+                      </li>
+                      <li class="nav-item mx-2">
+                        <a class="nav-link" href="#">Khám Phá</a>
+                      </li>
+                      <li class="nav-item mx-2">
+                        <a class="nav-link" href="#">Liên Hệ</a>
+                      </li>
+                    </ul>
+                    <!-- Đăng Nhập & Đăng Ký -->
+                        <div class="d-flex flex-column flex-lg-row justify-content-center align-items-center gap-1">
+                        <a href="./dangnhap.html" class="text-white text-decoration-none px-3 py-1 rounded-4" style="background-color: #F172A1;">Đăng Nhập</a>
+                        <a href="./dangky.html" class="text-white text-decoration-none px-3 py-1 rounded-4" style="background-color: #A1C3D1;">Đăng Ký</a>
+                        </div>
+              </div>
+          </div>
+          </div>
+        </nav>
+  </header>
+    <div class="qc-login d-flex flex-column">
+      <form method="post" enctype="application/x-www-form-urlencoded">
+        <fieldset>
+          <legend>
+            <h1 class="text-center">Đăng Nhập</h1>
+          </legend>
+          <div class="qc-form">
+            <label for="email"><b>Email:</b></label>
+            <input type="text" placeholder="Vui lòng nhập email" name="email" id="email">
+            <label for="psw"><b>Mật khẩu:</b></label>
+            <input type="password" placeholder="Vui lòng nhập mật khẩu" name="psw" id="psw">
+            <div class="qc-button">
+              <button type="submit">Đăng Nhập</button>
+              <button type="submit">Huỷ</button>
             </div>
-        </div>
-      </header>
-      <main>
-        <!-- ******** -->
-        
-        <div class="qc-login">
-        <form method="post" enctype="application/x-www-form-urlencoded">
-          <fieldset>
-            <legend><h1>Đăng Nhập</h1></legend>
-            <div class="qc-form">
-              
-              <label for="email"><b>Email:</b></label>
-              <input type="text" placeholder="Vui lòng nhập email" name="email" id="email">
+          </div>
+          <div class="text-end mx-10" >
+            <a href="">Quên mật khẩu?</a>
+          </div>
+        </fieldset>
+      </form>
+    </div>
 
-              <label for="psw"><b>Mật khẩu:</b></label>
-              <input type="password" placeholder="Vui lòng nhập mật khẩu" name="psw" id="psw">
 
-              <div class="qc-button">
-                <button type="submit">Đăng Nhập</button>
-              </div>
+    <!-- ****** -->
+  </main>
+  <footer>
+    <p>Bản quyền thuộc về nhóm 8 - CT188-06</p>
+    <p>Các Thành Viên: Nguyễn Đặng Quốc Cường - Nguyễn Hải Lương - Huỳnh Long Vân</p>
+    <p>Do not copyright &copy</p>
+  </footer>
+</body>
 
-             </div> 
-
-              <div>
-                <a href="">Quên mật khẩu?</a>
-              </div>
-          </fieldset>
-        </form>
-        </div>
-               
-	      
-        <!-- ****** -->   
-      </main>
-      <footer>
-          <p>Bản quyền thuộc về nhóm 8 - CT188-06</p>
-          <p>Các Thành Viên: Nguyễn Đặng Quốc Cường - Nguyễn Hải Lương - Huỳnh Long Vân</p>
-          <p>Do not copyright &copy</p>
-      </footer>
-  </body>
 </html>
