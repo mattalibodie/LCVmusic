@@ -1,46 +1,58 @@
-*{
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+* {
   box-sizing: border-box;
   margin: 0;
+
 }
-body{
-    box-sizing: border-box;
-    height: 100%;
-    min-width: 1100px;
-    display: flex;
-    flex-direction: column;
-    font-size: 1em;
-    font-family: Arial, Helvetica, sans-serif;
-    margin-left: 200px;
-    margin-right: 50px;
-    margin-top: 0px;
-    background-color: #8EC5FC;
-    background-image: linear-gradient(62deg, #8EC5FC 0%, #E0C3FC 100%);
+
+body {
+  box-sizing: border-box;
+  height: 100%;
+  min-width: 1100px;
+  display: flex;
+  flex-direction: column;
+  font-size: 1em;
+  font-family: Arial, Helvetica, font-sans;
+  margin-left: 200px;
+  margin-right: 50px;
+  margin-top: 0px;
+  /* background-image: linear-gradient(to top, #a8edea 0%, #fed6e3 100%); */
+  background-image: linear-gradient(0deg, #97D9E1 42%, #f3bbe0 100%);
+
 }
+
 /* Header */
-header{
+header {
   height: 70px;
   padding-top: 10px;
 }
-.input-containner, .search-container{
+
+.input-containner,
+.search-container {
 
   float: left;
   margin: 2px;
   padding: 3px;
 }
 
-.search-input{
-  background-color: #E0C3FC;
+.search-input {
+  background-color: #FCD6E3;
 }
 
-main{
+main {
   display: block;
 }
 
-a{
+a {
   text-decoration: none;
 }
 
-.search-box{
+.search-box {
 
   float: right;
   border: solid 1.5px;
@@ -48,13 +60,14 @@ a{
   padding-top: 1px;
 }
 
-.search-box i{
+.search-box i {
   font-size: 20px;
-  float: left;
   height: 25px;
-  margin-left: 10px;
+  margin-right: 15px;
   padding-top: 5px;
+
 }
+
 input[type=text] {
   width: 100%;
   border: none;
@@ -62,64 +75,58 @@ input[type=text] {
 }
 
 /* Sidebar */
-.side-bar{
-    height: 70%;
-    width: 180px;
-    position: fixed;
-    z-index: 1;
-    top: 0;
-    left: 0;
-    overflow-x: hidden;
-    padding-top: 50px;
+.logo{
+  text-align: center;
+  margin: 20px 10px 20px 0;
+}
+#main-logo{
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  margin-bottom: 10px;
+}
+.side-bar {
+  height: 100%;
+  width: 190px;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  overflow-x: hidden;
+  margin-left: 10px;  
+  border-left: none;
+}
+
+.account {
+  border-bottom: solid #afc6cf 2px;
+  margin-bottom: 8px;
 }
 
 .side-bar a {
   padding: 6px 8px 6px 16px;
   text-decoration: none;
   font-size: 20px;
-  color: #818181;
-  padding-bottom: 5px;
-  margin-bottom: 10px;
-  border-radius: 10px;
+  color: #6d6d6d;
+  padding-bottom: 10px;
+  width: 95%;
+  margin-bottom: 15px;
+  border-radius: 15px;
   display: flex;
+  background-color: rgb(121, 202, 243);
+
 }
-.side-bar i{
+
+.side-bar i {
   margin-right: 20px;
   width: 10px;
 }
 
 .side-bar a:hover {
-  color: #f1f1f1;
-
+  color: #B39BC8;
 }
-
-/* Responsive sidebar */
-
-@media screen and (min-width: 180px) {
-  .sidebar {
-    width: 100%;
-    height: 50px;
-    position: relative;
-  }
-  .sidebar a {float: left;}
-  div.content {margin-left: 0;}
-}
-
-/* On screens that are less than 400px, display the bar vertically, instead of horizontally */
-@media screen and (max-width: 400px) {
-  .sidebar a {
-    text-align: center;
-    float: none;
-  }
-  .side-bar h4{
-    display: none;
-  }
-}
-
 
 /* end Responsive sidebar */
-.content
-{
+.content {
   display: flex;
   flex-direction: row;
   margin: 20px 0;
@@ -127,48 +134,52 @@ input[type=text] {
 
 /* Gallery */
 
-.slider{
-  float: left;
-  width: 800px;
-  height: 400px;
-  margin: auto;
+img.slide {
+  width: 710px;
+  height: 90%;
+  object-fit: cover;
+}
+
+img.slide:not(:first-child) {
+  display: none;
+}
+
+.container {
+  width: 710px;
+  height: 460px;
+  margin: 0 auto;
   position: relative;
-  overflow: hidden;
+  padding: 5px;
 }
-.slider .list{
+
+/* 2 button change slide: prev and next */
+.btn-change {
   position: absolute;
-  height: 100%;
-  left: 0;
-  top: 0;
-  display: flex;
-  transition: 1s;
-}
-.slider .list img{
-  width: 800px;
-  height: 400px;
-  object-fit: fill;
-}
-.slider .buttons{
-  position: absolute;
-  top: 45%;
-  left: 5%;
-  width: 90%;
-  display: flex;
-  justify-content: space-between;
-}
-.slider .buttons button{
-  width: 50px;
-  height: 50px;
+  top: 50%;
+  transform: translateY(-100%);
+  width: 40px;
+  height: 40px;
   border-radius: 50%;
-  background-color: #fff5;
-  color: #fff;
+  color: #9b9b9b;
   border: none;
   font-family: monospace;
   font-weight: bold;
+  cursor: pointer;
 }
-.slider .dots{
+
+#next {
+  right: 10px;
+  ;
+}
+
+#prev {
+  left: 10px;
+}
+
+/* 4 button corresponding to 4 image */
+.change-img {
   position: absolute;
-  bottom: 10px;
+  bottom: 50px;
   left: 0;
   color: #fff;
   width: 100%;
@@ -176,8 +187,11 @@ input[type=text] {
   padding: 0;
   display: flex;
   justify-content: center;
+
 }
-.slider .dots li{
+
+.change-img button {
+  display: inline;
   list-style: none;
   width: 10px;
   height: 10px;
@@ -186,30 +200,26 @@ input[type=text] {
   border-radius: 20px;
   transition: 0.5s;
 }
-.slider .dots li.active{
+
+.change-img button.active {
   width: 30px;
+  color: white;
 }
-
-
 
 /* ******* */
 
-.playlist
-{
+.playlist {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-
 }
 
-
-
-.album-music{
+.album-music {
   margin: 20px 15px;
   text-decoration: none;
 }
 
-.album-music img{
+.album-music img {
   display: block;
   border-radius: 7px;
   width: 150px;
@@ -217,33 +227,68 @@ input[type=text] {
   box-shadow: 0 15px 35px #3d2173a1;
 }
 
-.bxh{
-    min-width: 250px;
-    font-size: 20px;
+.bxh {
+  width: 25%;
+  font-size: 20px;
+  box-shadow: 0 15px 35px #3d2173a1;
+  padding: 0 15px;
 }
 
-.bxh li{
+.bxh ol {
+  display: block;
+  font-weight: 700;
+  color: #6d6d6d;
+  text-align: center;
+  padding: 10px 0;
+  border-bottom: #f3f3f3 solid 1px;
+  counter-reset: item;
+}
+
+.bxh li {
+  position: relative;
   list-style: none;
-  margin: 10px;
+  padding: 10px;
   border-bottom: #f3f3f3 solid 1px;
   color: black;
 }
+
+.bxh li:before {
+  content: counter(item) "";
+  counter-increment: item;
+  position: absolute;
+  top: 10px;
+  right: 3px;
+  font-size: 2rem;
+
+}
+
 .bxh p{
   font-size: 15px;
   padding-top: 10px;
 }
 
-.title{
-    display: block;
-    margin: 20px 0;
+.bxh h4, .bxh a, p, li::before {
+  color: #6d6d6d;
+
 }
-.text-info{
+
+li h4:hover, li p:hover{
+  cursor: pointer;
+}
+
+.title {
+  display: block;
+  margin: 20px 0;
+}
+
+.text-info {
   color: black;
   font-size: 15px;
   text-align: left;
   margin-top: 10px;
 }
-.singer{
+
+.singer {
   margin-top: 10px;
 }
 
@@ -253,22 +298,27 @@ input[type=text] {
 .music {
   position: relative;
   border-radius: 12px;
-  background-color: #E0C3FC;
+  background-color: #f8bcd1;
   margin: 20px;
+  padding: 10px;
 }
+
 .music-thumb {
   width: 100px;
   height: 100px;
 }
-.text-content{
+
+.text-content {
   display: flex;
   flex-direction: row;
   justify-content: center;
   margin-top: -40px;
 }
-.text-content h4{
+
+.text-content h4 {
   margin-left: 10px;
 }
+
 .music-thumb img {
   width: 100%;
   height: 100%;
@@ -276,23 +326,27 @@ input[type=text] {
   margin: 10px;
   border-radius: 10px;
 }
+
 .timer {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  font-size: 14px;
   color: #999;
   margin-bottom: 10px;
+  padding-left: 10px;
 }
+
 .controls {
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 0 30px;
 }
+
 .play {
   position: relative;
 }
+
 .play:before {
   content: "";
   position: absolute;
@@ -301,6 +355,7 @@ input[type=text] {
   transform: scale(1.5);
   border-radius: 100rem;
 }
+
 .player-inner {
   width: 50px;
   height: 50px;
@@ -315,6 +370,7 @@ input[type=text] {
   position: relative;
   z-index: 2;
 }
+
 .play-repeat,
 .play-back,
 .play-forward {
@@ -322,44 +378,124 @@ input[type=text] {
 }
 
 .range {
-  -webkit-appearance: none; /* Hides the slider so that custom slider can be made */
-  width: 100%; /* Specific width is required for Firefox. */
-  background: transparent; /* Otherwise white in Chrome */
-  margin-bottom: 40px;
+  -webkit-appearance: none;
+  /* Hides the slider so that custom slider can be made */
+  width: 100%;
+  /* Specific width is required for Firefox. */
+  background: transparent;
+  /* Otherwise white in Chrome */
+  margin-bottom: 20px;
   margin-top: 30px;
   padding-top: 20px;
 }
+
 .range::-webkit-slider-runnable-track {
   width: 100%;
   height: 4px;
   background-color: #eeee;
 }
+
 .range::-webkit-slider-thumb {
   -webkit-appearance: none;
-  background-color: #20e3b2;
+  background-color: #FCD7E3;
   width: 15px;
   height: 15px;
   border-radius: 100rem;
   margin-top: -8px;
-  box-shadow: 0 0 0 3px white, 0 0 0 6px rgba(100, 100, 111, 0.05);
+  box-shadow: 0 0 0 3px rgb(192, 189, 189), 0 0 0 6px rgba(100, 100, 111, 0.05);
 }
 
 /* Footer */
-footer
-{
-  padding: 10px 0;
+footer {
+  display: block;
+  padding: 15px auto;
+  text-align: center;
+  font-weight: 600;
+  margin-top: 10px;
 }
 
 /* Scroll bar */
 ::-webkit-scrollbar {
-  width: 10px;
+  width: 5px;
 }
+
 ::-webkit-scrollbar-track {
-  border-radius: 15px;
-}
-::-webkit-scrollbar-thumb {
-  background-color: #e2e6f5;
   border-radius: 10px;
 }
+
+::-webkit-scrollbar-thumb {
+  background-color: #a0a0a0;
+  border-radius: 10px;
+}
+
 /* Scroll bar */
 
+/* QC FORM */
+.qc-form input[type=text],
+.qc-form input[type=password] {
+  display: block;
+  width: 100%;
+  padding: 14px;
+  border: none;
+  background: white;
+  margin-top: 10px;
+}
+
+input:focus {
+  outline: none;
+}
+
+.qc-form input[type=text]:focus,
+.qc-form input[type=password]:focus {
+  background: #f1f1f1;
+}
+
+
+.qc-button button:hover {
+  opacity: 1;
+}
+
+a {
+  color: dodgerblue;
+}
+
+.qc-sign-in {
+  text-align: center;
+}
+
+.qc-button button {
+  background-color: #04AA6D;
+  color: white;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  width: 49%;
+  opacity: 0.9;
+  display: inline;
+  margin-bottom: 0;
+}
+
+hr {
+  border: 1px solid #f1f1f1;
+
+}
+
+.qc-form {
+  padding: 16px;
+  padding-bottom: 0;
+}
+
+.qc-form * {
+  margin-bottom: 15px;
+}
+
+html {
+  position: relative;
+  min-height: 100vh;
+}
+
+body {
+  padding-bottom: 2.5rem;
+}
+
+/* volume range */

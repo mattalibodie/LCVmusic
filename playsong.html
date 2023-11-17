@@ -20,28 +20,50 @@
     ></script>
     <title>LCV - Online Music Player</title>
     <link rel="stylesheet" href="css/styles.css" />
-    <link rel="stylesheet" href="css/gallery.css">
+
     <link rel="icon" href="/image/shortcut_icon.png" />
     <!-- AweSome Font -->
     <script src="https://kit.fontawesome.com/2013436f4b.js" crossorigin="anonymous"></script>
+    <script src="./js/script.js"></script>
     <script src="./js/song.js"></script>
   </head>
   <body>
     <div class="side-bar">
-    <div class="account">
-        <a href="#"><i class="fa-solid fa-id-badge"></i>Đăng Nhập</a>
-        <a href="#"><i class="fa-solid fa-address-card"></i>Đăng Ký</a>
+        <div class="logo">
+            <img src="./image/logo.jpg" alt="day la logo" id="main-logo">
+            <h3>Đây là logo</h3>
+        </div>
+        <div class="account">
+            <a href="./dangnhap.html">
+                <i class="fa-solid fa-id-badge"></i>
+                <h4>Đăng Nhập</h4>
+            </a>
+            <a href="./dangky.html">
+                <i class="fa-solid fa-address-card"></i>
+                <h4>Đăng Ký</h4>
+            </a>
+        </div>
+        <div class="menu-list">
+            <a href="./bai_hat.html">
+                <i class="fa-brands fa-itunes-note"></i>
+                <h4>Bài Hát</h4>
+            </a>
+            <a href="#">
+                <i class="fa-solid fa-globe"></i>
+                <h4>Quốc Gia</h4>
+            </a>
+            <a href="#">
+                <i class="fa-brands fa-youtube"></i>
+                <h4>MV</h4>
+            </a>
+            <a href="#"><i class="fa-solid fa-compass"></i>
+                <h4>Khám Phá</h4>
+            </a>
+            <a href="#"><i class="fa-solid fa-address-book"></i>
+                <h4>Liên Hệ</h4>
+            </a>
+        </div>
     </div>
-    <div class="menu-list">
-        <a href="listener.html"><i class="fa-brands fa-itunes-note"></i>Bài Hát</a>
-        <a href="#"><i class="fa-solid fa-list"></i>Thể Loại</a>
-        <a href="#"><i class="fa-brands fa-youtube"></i>MV</a>
-        <a href="#"><i class="fa-solid fa-earth-asia"></i>Quốc Gia</a>
-        <a href="#"><i class="fa-solid fa-person"></i>Nghệ Sĩ</a>
-        <a href="#"><i class="fa-solid fa-compass"></i>Khám Phá</a>
-        <a href="#"><i class="fa-regular fa-address-book"></i>Liên Hệ</a>
-    </div>
-      </div>
     <header>
         <div class="search-box">
             <a href=""><i class="fa-solid fa-magnifying-glass"></i></a>
@@ -90,7 +112,9 @@
           <div class="player-foward">
             <ion-icon name="play-forward" class="play-forward"></ion-icon>
           </div>
-          <ion-icon name="repeat-outline" class="play-repeat"></ion-icon>
+          <div>
+            <ion-icon name="repeat-outline" class="play-repeat"></ion-icon>
+          </div>
         </div>
       </div>
       <!-- ****** -->
@@ -128,11 +152,11 @@
             </a>
             <a href="#" onclick="playSong(this)" id="3" class="album-music">
                 <div class="album-thumb">
-                    <img src="image/album/demo_vuon_nha.jpg" alt="">
+                    <img src="image/album/la_lung.jpg" alt="">
                 </div>
                 <div class="text-info">
-                    <div class="songName"><h4>Vườn Nhà</h4></div>
-                    <div class="singer">Phan Mạnh Quỳnh</div>
+                    <div class="songName"><h4>Lạ Lùng</h4></div>
+                    <div class="singer">Vũ</div>
                 </div>
             </a>
             <a href="#" onclick="playSong(this)" id="4" class="album-music">

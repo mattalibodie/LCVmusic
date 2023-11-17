@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Đăng Ký</title>
+    <link rel="stylesheet" href="./css/styles.css" />
+    <link rel="icon" href="./image/shortcut_icon.png" />
+    <!-- Ionic icon -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+    ></script>
+    <!-- AweSome Font -->
+    <script src="https://kit.fontawesome.com/2013436f4b.js" crossorigin="anonymous"></script>
+  </head>
+  <body>
+    <div class="side-bar">
+      <div class="logo">
+        <img src="./image/logo.jpg" alt="day la logo" id="main-logo">
+        <h3>Đây là logo</h3>
+    </div>
+      <div class="account">
+          <a href="./dangnhap.html">
+              <i class="fa-solid fa-id-badge"></i>
+              <h4>Đăng Nhập</h4>
+          </a>
+          <a href="./dangky.html">
+              <i class="fa-solid fa-address-card"></i>
+              <h4>Đăng Ký</h4>
+          </a>
+      </div>
+      <div class="menu-list">
+          <a href="./bai_hat.html">
+              <i class="fa-brands fa-itunes-note"></i>
+              <h4>Bài Hát</h4>
+          </a>
+          <a href="#">
+              <i class="fa-solid fa-globe"></i>
+              <h4>Quốc Gia</h4>
+          </a>
+          <a href="#">
+              <i class="fa-brands fa-youtube"></i>
+              <h4>MV</h4>
+          </a>
+          <a href="#"><i class="fa-solid fa-compass"></i>
+              <h4>Khám Phá</h4>
+          </a>
+          <a href="#"><i class="fa-solid fa-address-book"></i>
+              <h4>Liên Hệ</h4>
+          </a>
+      </div>
+  </div>
+    <header>
+        <div class="search-box">
+            <a href=""><i class="fa-solid fa-magnifying-glass"></i></a>
+            <div class="search-container">  
+              <form method="get" action="#">
+                <div class="input-container">
+                  <input
+                    id="search"
+                    class="search-input"
+                    type="text"
+                    placeholder="Nhập nội dung cần tìm... "
+                    name="search"
+                  />
+                </div>
+              </form>
+            </div>
+        </div>
+      </header>
+      <main>
+        <!-- ******** -->
+        
+           
+              <form method="post" enctype="application/x-www-form-urlencoded">
+    <fieldset>
+      <legend><h1>Đăng ký</h1></legend>
+      <div class="qc-form">
+    
+        <p>Mời điền thông tin vào form để tạo tài khoản.</p>
+        <hr>
+        <label for="email"><b>Email:</b></label>
+        <input type="text" placeholder="Vui lòng nhập email" name="email" id="email">
+
+        <label for="psw"><b>Mật khẩu:</b></label>
+        <input type="password" placeholder="Vui lòng nhập mật khẩu" name="psw" id="psw">
+
+        <label for="psw-repeat"><b>Nhập lại mật khẩu:</b></label>
+        <input type="password" placeholder="Nhập lại mật khẩu" name="psw-repeat" id="psw-repeat">
+
+        <p>Thông qua việc tạo tài khoản, bạn đồng ý với <a href="">Điều khoản & Quyền riêng tư của chúng tôi</a>.</p>
+
+        <div class="qc-button">
+          <button type="submit">Đăng Ký</button>
+          <button type="reset">Huỷ</button>
+        </div>
+      </div>
+  
+      <div class="qc-sign-in">
+        <p>Đã có tài khoản? <a href="dangnhap.html">Đăng nhập</a>.</p>
+      </div>
+    </fieldset>
+  </form>     
+              <!-- ****** -->   
+      </main>
+      <footer>
+          <p>Bản quyền thuộc về nhóm 8 - CT188-06</p>
+          <p>Các Thành Viên: Nguyễn Đặng Quốc Cường - Nguyễn Hải Lương - Huỳnh Long Vân</p>
+          <p>Do not copyright &copy</p>
+      </footer>
+  </body>
+</html>
