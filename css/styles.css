@@ -17,6 +17,7 @@ body {
   overflow: hidden;
   border-radius: 7px;
   box-sizing: 0 15px 35px #3d2173a1;
+  cursor: pointer;
 }
 
 .album-poster img{

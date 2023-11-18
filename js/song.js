@@ -22,27 +22,20 @@ const musics = [ // Cập Nhật Nhạc
     },
     {
         id: 3,
-        title: "Lạ Lùng",
-        singer: "Vũ.",
-        file: "la_lung.mp3",
-        image: "image/album/la_lung.jpg"
-    },
-    {
-        id: 4,
         title: "Từng Quen",
         singer: "Wren Evan.",
         file: "Tung_Quen_Wren_Evan.mp3",
         image: "image/album/demo_tungquen.jpg"
     },
     {
-        id: 5,
+        id: 4,
         title: "Cà Phê",
         singer: "Min.",
         file: "Ca-Phe-MIN.mp3",
         image: "image/album/cafe-min.png"
     },
     {
-        id: 6,
+        id: 5,
         title: "Chúng ta của hiện tại",
         singer: "Sơn Tùng M-TP.",
         file: "chung_ta_cua_hien_tai.mp3",

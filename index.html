@@ -49,7 +49,7 @@
                           <a class="nav-link " href="./bai_hat.html">Bài Hát</a>
                         </li>
                         <li class="nav-item mx-2">
-                          <a class="nav-link" href="#">Quốc Gia</a>
+                          <a class="nav-link" href="#">Ca Sĩ</a>
                         </li>
                         <li class="nav-item mx-2">
                           <a class="nav-link" href="#">Khám Phá</a>
@@ -69,11 +69,11 @@
           </nav>
     </header>
     <!-- Phần loading screen  -->
-    <!-- <div id="loader-wrapper">
+    <div id="loader-wrapper">
         <div id="loader"></div>
         <div class="loader-section section-left"></div>
         <div class="loader-section section-right"></div>
-    </div> -->
+    </div>
     <div class="main">
         <div class="container">
             <div class="row mb-2">
@@ -94,28 +94,28 @@
                 <div class="bxh col-md-3">
                     <ol>Gợi ý</ol>
                     <li>
-                        <h4 onclick="playSong(this)" item="0">Making My Way</h4>
-                        <p><a href="./bai_hat.html#">Sơn Tùng M-TP</a></p>
+                        <h4 onclick="playSong(this)" item="0" class="pointer-event">Making My Way</h4>
+                        <p><a href="#">Sơn Tùng M-TP</a></p>
                     </li>
                     <li>
-                        <h4 onclick="playSong(this)" item="4">Từng Quen</h4>
-                        <p><a href="./bai_hat.html#">Wren Evans</a></p>
+                        <h4 onclick="playSong(this)" item="3" class="pointer-event">Từng Quen</h4>
+                        <p><a href="#">Wren Evans</a></p>
                     </li>
                     <li>
-                        <h4 onclick="playSong(this)" item="6">Chúng ta của hiện tại</h4>
-                        <p><a href="./bai_hat.html#">Sơn Tùng M-TP</a></p>
+                        <h4 onclick="playSong(this)" item="6" class="pointer-event">Chúng ta của hiện tại</h4>
+                        <p><a href="#">Sơn Tùng M-TP</a></p>
                     </li>
                     <li>
-                        <h4 onclick="playSong(this)" item="2">Đợi (2023 remake)</h4>
-                        <p><a href="./bai_hat.html#">Vũ</a></p>
+                        <h4 onclick="playSong(this)" item="5" class="pointer-event">Chúng Ta Của Hiện Tại</h4>
+                        <p><a href="#">Sơn Tùng M-TP</a></p>
                     </li>
                     <li>
-                        <h4 onclick="playSong(this)" item="2">Đợi (2023 remake)</h4>
-                        <p><a href="./bai_hat.html#">Vũ</a></p>
+                        <h4 onclick="playSong(this)" item="4" class="pointer-event" >Cà Phê</h4>
+                        <p><a href="#">Min</a></p>
                     </li>
                     <li>
-                        <h4 onclick="playSong(this)" item="2">Đợi (2023 remake)</h4>
-                        <p><a href="./bai_hat.html#">Vũ</a></p>
+                        <h4><a href="">Attention</a></h4>
+                        <p><a href="#">Charlie Puth</a></p>
                     </li>
                 </div>
             </div>
@@ -127,95 +127,96 @@
             </div>
             <div class="row">
                 <div class="col-4 col-md-2">
-                    <a href="" class="album-poster">
+                    <div onclick="playSong(this)" item="0" class="album-poster">
                         <img src="./image/album/demo_making_my_way.jpg" alt="">
-                    </a>
+                    </div>
                     <h4>Making My Way</h4>
                     <p>Sơn Tùng M-TP</p>
                 </div>
                 <div class="col-4 col-md-2">
-                    <a href="" class="album-poster">
-                        <img src="./image/album/demo_making_my_way.jpg" alt="">
-                    </a>
-                    <h4>Making My Way</h4>
-                    <p>Sơn Tùng M-TP</p>
+                    <div onclick="playSong(this)" item="1" class="album-poster">
+                        <img src="./image/album/troThanhPhuThue.jpg" alt="">
+                    </div>
+                    <h4>Trở Thành Phu Thuê</h4>
+                    <p>Hương Ly</p>
                 </div>
                 <div class="col-4 col-md-2">
-                    <a href="" class="album-poster">
-                        <img src="./image/album/demo_making_my_way.jpg" alt="">
-                    </a>
-                    <h4>Making My Way</h4>
-                    <p>Sơn Tùng M-TP</p>
+                    <div onclick="playSong(this)" item="2" class="album-poster">
+                        <img src="./image/album/demo_vu_doi_2023.jpg" alt="">
+                        </a>
+                    </div>
+                        <h4>Đợi (2023-remake)</h4>
+                        <p>Vũ.</p>
                 </div>
                 <div class="col-4 col-md-2">
-                    <a href="" class="album-poster">
-                        <img src="./image/album/demo_making_my_way.jpg" alt="">
-                    </a>
-                    <h4>Making My Way</h4>
-                    <p>Sơn Tùng M-TP</p>
+                    <div onclick="playSong(this)" item="3" class="album-poster">
+                        <img src="./image/album/demo_tungquen.jpg" alt="">
+                    </div>
+                        <h4>Từng Quen</h4>
+                        <p>Wren Evans</p>
                 </div>
                 <div class="col-4 col-md-2">
-                    <a href="" class="album-poster">
-                        <img src="./image/album/demo_making_my_way.jpg" alt="">
-                    </a>
-                    <h4>Making My Way</h4>
-                    <p>Sơn Tùng M-TP</p>
+                    <div onclick="playSong(this)" item="4" class="album-poster">
+                        <img src="./image/album/cafe-min.png" alt="">
+                    </div>
+                    <h4>Cà Phê</h4>
+                    <p>Min</p>
                 </div>
                 <div class="col-4 col-md-2">
-                    <a href="" class="album-poster">
-                        <img src="./image/album/demo_making_my_way.jpg" alt="">
-                    </a>
-                    <h4>Making My Way</h4>
+                    <div onclick="playSong(this)" item="5" class="album-poster">
+                        <img src="./image/album/chungtacuahientai.jpg" alt="">
+                    </div>
+                    <h4>Chúng Ta Của Hiện Tại</h4>
                     <p>Sơn Tùng M-TP</p>
                 </div>
-            </div>
         </div>
+        </div>   
         <div class="container">
             <div class="">
-                <h3>Playlist</h3>
+                <h3>US & UK</h3>
             </div>
             <div class="row">
                 <div class="col-4 col-md-2">
-                    <a href="" class="album-poster">
-                        <img src="./image/album/demo_making_my_way.jpg" alt="">
+                    <a href="https://youtu.be/nfs8NYg7yQM" class="album-poster">
+                        <img src="https://i.scdn.co/image/ab67616d0000b273897f73256b9128a9d70eaf66" alt="">
                     </a>
-                    <h4>Making My Way</h4>
-                    <p>Sơn Tùng M-TP</p>
+                    <h4>Attention</h4>
+                    <p>Charlie Puth</p>
                 </div>
                 <div class="col-4 col-md-2">
-                    <a href="" class="album-poster">
-                        <img src="./image/album/demo_making_my_way.jpg" alt="">
+                    <a href="https://youtu.be/1i8WJ8cRWsE" class="album-poster">
+                        <img src="https://i.scdn.co/image/ab67616d0000b27319aff2da63b211d75341e8eb" alt="">
                     </a>
-                    <h4>Making My Way</h4>
-                    <p>Sơn Tùng M-TP</p>
+                    <h4>Limbo</h4>
+                    <p>Keshi</p>
                 </div>
                 <div class="col-4 col-md-2">
-                    <a href="" class="album-poster">
-                        <img src="./image/album/demo_making_my_way.jpg" alt="">
+                    <a href="https://youtu.be/jO2viLEW-1A" class="album-poster">
+                        <img src="https://i.scdn.co/image/ab67616d0000b273e652883af4df2fca5d71a57a" alt="">
                     </a>
-                    <h4>Making My Way</h4>
-                    <p>Sơn Tùng M-TP</p>
+                    <h4>comethru </h4>
+                    <p>Jeremy Zucker</p>
                 </div>
                 <div class="col-4 col-md-2">
-                    <a href="" class="album-poster">
-                        <img src="./image/album/demo_making_my_way.jpg" alt="">
+                    <a href="https://youtu.be/VXzAJd8UJl8" class="album-poster">
+                        <img src="https://i.scdn.co/image/ab67616d0000b27387bb1da05f3491eea3401de5" alt="">
                     </a>
-                    <h4>Making My Way</h4>
-                    <p>Sơn Tùng M-TP</p>
+                    <h4>At My Worst</h4>
+                    <p>Pink Sweat$  </p>
                 </div>
                 <div class="col-4 col-md-2">
-                    <a href="" class="album-poster">
-                        <img src="./image/album/demo_making_my_way.jpg" alt="">
+                    <a href="https://youtu.be/D9G1VOjN_84" class="album-poster">
+                        <img src="https://i.scdn.co/image/ab67616d0000b273aa597e50829169e6994eb403" alt="">
                     </a>
-                    <h4>Making My Way</h4>
-                    <p>Sơn Tùng M-TP</p>
+                    <h4>Enemy (with JID)</h4>
+                    <p>Imagine Dragons</p>
                 </div>
                 <div class="col-4 col-md-2">
-                    <a href="" class="album-poster">
-                        <img src="./image/album/demo_making_my_way.jpg" alt="">
+                    <a href="https://youtu.be/Y88LVU7MAe4" class="album-poster">
+                        <img src="https://i.scdn.co/image/ab67616d0000b273e2e352d89826aef6dbd5ff8f" alt="">
                     </a>
-                    <h4>Making My Way</h4>
-                    <p>Sơn Tùng M-TP</p>
+                    <h4>What's Up Danger</h4>
+                    <p>Blackway & Black Caviar</p>
                 </div>
             </div>
         </div>
