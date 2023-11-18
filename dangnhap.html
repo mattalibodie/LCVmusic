@@ -11,22 +11,20 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet" />
   <script src="./js/jquery-3.7.1.min.js"></script>
-  <!-- loading screen css -->
-  <link rel="stylesheet" href="./css/loading.css">
+    <!-- Ionic Icon -->
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
   <script src="./js/script.js"></script>
-  <script src="./js/gallery.js"></script>
   <link rel="stylesheet" href="./css/styles.css">
   <title>LCV Music</title>
 </head>
-
 <body>
-
   <main>
     <!-- ******** -->
     <header>
       <nav class="navbar navbar-dark navbar-expand-md bg-transparent ">
           <div class="container-fluid">
-            <a class="navbar-brand" href="#">
+            <a class="navbar-brand" href="./index.html">
               <img src="./image/music-svgrepo-com.svg" alt="" width="50px" height="50px">LCV MUSIC
             </a>
             <!-- BUTTON -->
@@ -67,31 +65,30 @@
           </div>
         </nav>
   </header>
-    <div class="qc-login d-flex flex-column">
-      <form method="post" enctype="application/x-www-form-urlencoded">
-        <fieldset>
-          <legend>
-            <h1 class="text-center">Đăng Nhập</h1>
-          </legend>
-          <div class="qc-form">
-            <label for="email"><b>Email:</b></label>
-            <input type="text" placeholder="Vui lòng nhập email" name="email" id="email">
-            <label for="psw"><b>Mật khẩu:</b></label>
-            <input type="password" placeholder="Vui lòng nhập mật khẩu" name="psw" id="psw">
-            <div class="qc-button">
-              <button type="submit">Đăng Nhập</button>
-              <button type="submit">Huỷ</button>
-            </div>
+    <div class="container form-login d-lg-flex justify-content-center align-content-center">
+      <form action="">
+        <h2 class="text-center m-3">Đăng Nhập</h2>
+        <div class="mb-3 row">
+          <label for="staticEmail" class="col-sm-2 col-form-label">Email</label>
+          <div class="col-sm-10">
+            <input type="text"  class="form-control" id="" placeholder="email@example.com">
           </div>
-          <div class="text-end mx-10" >
-            <a href="">Quên mật khẩu?</a>
+        </div>
+        <div class="mb-3 row">
+          <label for="inputPassword" class="col-sm-2 col-form-label mb-3">Mật Khẩu</label>
+          <div class="col-sm-10">
+            <input type="password" class="form-control mb-3" id="inputPassword">
           </div>
-        </fieldset>
+          <a href="#" class="">Quên mật khẩu</a>
+          <button type="button" class="btn btn-primary mx-auto">Đăng Nhập</button>
+        </div>
+          <div class="option-2 mb-3 row">
+            <button type="button" class="btn login-google mb-3 mx-auto ">Đăng nhập bằng Google <ion-icon name="logo-google"></ion-icon></button>
+            <button type="button" class="btn login-fb mb-3 mx-auto">Đăng Nhập bằng Facebook <ion-icon name="logo-facebook"></ion-icon></button>
+            <button type="button" class="btn login-zalo mb-3 mx-auto">Đăng Nhập bằng Zalo </button>
+          </div>
       </form>
     </div>
-
-
-    <!-- ****** -->
   </main>
   <footer>
     <p>Bản quyền thuộc về nhóm 8 - CT188-06</p>

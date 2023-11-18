@@ -324,66 +324,22 @@ footer {
 
 
 /* QC FORM */
-.qc-form input[type=text],
-.qc-form input[type=password] {
-  display: block;
-  width: 100%;
-  padding: 14px;
-  border: none;
-  background: white;
-  margin-top: 10px;
+form{
+  background-color: #F0EBF4;
+  padding: 10px;
+  border-radius: 10px;
 }
 
-input:focus {
-  outline: none;
+.login-zalo{
+  background-color: #0091FF;
+}
+.login-fb{
+  background-color: #4766A9;
+}
+.login-google{
+  background-color: #cfcece;
+}
+.btn{
+  width: 90%;
 }
 
-.qc-form input[type=text]:focus,
-.qc-form input[type=password]:focus {
-  background: #f1f1f1;
-}
-
-
-.qc-button button:hover {
-  opacity: 1;
-}
-
-a {
-  color: dodgerblue;
-}
-
-.qc-sign-in {
-  text-align: center;
-}
-
-.qc-button button {
-  background-color: #04AA6D;
-  color: white;
-  padding: 16px 20px;
-  border: none;
-  cursor: pointer;
-  width: 49%;
-  opacity: 0.9;
-  display: inline;
-  margin-bottom: 0;
-}
-
-hr {
-  border: 1px solid #f1f1f1;
-}
-
-.qc-form {
-  padding: 16px;
-  padding-bottom: 0;
-}
-
-.qc-form * {
-  margin-bottom: 0.5rem;
-} 
-
-.qc-login{
-  width: 50%;
-  margin: 0 auto;
-  border: solid green 1px;
-  padding: 0.65em;
-}
