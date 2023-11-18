@@ -67,27 +67,28 @@
           </div>
         </nav>
   </header>
-    <div class="qc-login d-flex flex-column">
-      <form method="post" enctype="application/x-www-form-urlencoded">
-        <fieldset>
-          <legend>
-            <h1 class="text-center">Đăng Nhập</h1>
-          </legend>
-          <div class="qc-form">
-            <label for="email"><b>Email:</b></label>
-            <input type="text" placeholder="Vui lòng nhập email" name="email" id="email">
-            <label for="psw"><b>Mật khẩu:</b></label>
-            <input type="password" placeholder="Vui lòng nhập mật khẩu" name="psw" id="psw">
-            <div class="qc-button">
-              <button type="submit">Đăng Nhập</button>
-              <button type="submit">Huỷ</button>
+    <div class="container">
+      <div class="qc-login row-sm">
+        <form method="post" enctype="application/x-www-form-urlencoded">
+          <fieldset>
+            <legend>
+              <h1 class="text-center">Đăng Nhập</h1>
+            </legend>
+            <div class="mb-3 row">
+              <label for="staticEmail" class="col-sm-2 col-form-label">Email</label>
+              <div class="col-sm-10">
+                <input type="text" readonly class="form-control-plaintext" id="staticEmail" value="email@example.com">
+              </div>
             </div>
-          </div>
-          <div class="text-end mx-10" >
-            <a href="">Quên mật khẩu?</a>
-          </div>
-        </fieldset>
-      </form>
+            <div class="mb-3 row">
+              <label for="inputPassword" class="col-sm-2 col-form-label">Password</label>
+              <div class="col-sm-10">
+                <input type="password" class="form-control" id="inputPassword">
+              </div>
+            </div>
+          </fieldset>
+        </form>
+      </div>
     </div>
 
 
