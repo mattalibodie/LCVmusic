@@ -343,3 +343,29 @@ form{
   width: 90%;
 }
 
+h1 {
+  overflow: hidden;
+  text-align: center;
+}
+
+.divider::before,
+.divider::after {
+  background-color: #000;
+  content: "";
+  display: inline-block;
+  height: 1px;
+  position: relative;
+  vertical-align: middle;
+  width: 40%;
+}
+
+.divider::before {
+  right: 0.5em;
+  margin-left: -50%;
+}
+
+.divider::after {
+  left: 0.5em;
+  margin-right: -50%;
+}
+
