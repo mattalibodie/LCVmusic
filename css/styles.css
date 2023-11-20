@@ -348,10 +348,10 @@ form{
 }
 
 /* divider tag */
-h4{
+.divider{
   overflow: hidden;
 }
-h4::before, h4::after{
+.divider::before, .divider::after{
   background-color: #000;
   content: "";
   display: inline-block;
@@ -360,11 +360,11 @@ h4::before, h4::after{
   vertical-align: middle;
   width: 50%;
 }
-h4::before {
+.divider::before {.
   right: 0.5em;
   margin-left: -50%;
 }
-h4::after {
+.divider::after {
   left: 0.5em;
   margin-right: -50%;
 }
