@@ -138,3 +138,5 @@ function init(indexSong)
 console.log(localStorage.getItem("songID"));
 init(indexSong);
 timer = setInterval(displayTimer, 500);
+
+

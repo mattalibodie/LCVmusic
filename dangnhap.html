@@ -15,6 +15,7 @@
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
   <script src="./js/script.js"></script>
+  <script src="./js/app.js"></script>
   <link rel="stylesheet" href="./css/styles.css">
   <title>LCV Music</title>
 </head>
@@ -66,22 +67,30 @@
           </nav>
     </header>
     <div class="container form-login d-lg-flex justify-content-center align-content-center">
-      <form action="">
+      <form action="#" method="post" onsubmit="return loginValidate(this);">
         <h2 class="text-center m-3">Đăng Nhập</h2>
         <div class="mb-3 row">
-          <label for="inputEmail" class="col-sm-2 col-form-label">Email</label>
-          <div class="col-sm-10">
-            <input type="text"  class="form-control" id="inputEmail" placeholder="email@example.com">
+          <div class="col-md-2">
+            <label for="inputEmail" class="col-form-label">Email</label>
+          </div>
+          <div class="col-md-10 has-validation">
+            <input type="text" class="form-control" id="inputEmail">
           </div>
         </div>
         <div class="mb-3 row">
-          <label for="inputPassword" class="col-sm-2 col-form-label mb-3">Mật Khẩu</label>
-          <div class="col-sm-10">
-            <input type="password" class="form-control mb-3" id="inputPassword">
+          <label for="inputPassword" class="col-md-2 col-form-label mb-3">Mật Khẩu</label>
+          <div class="col-md-10">
+            <input type="password" class="form-control mb-3" id="inputPassword" onkeypress="">
           </div>
-          <a href="#" class="">Quên mật khẩu</a>
-          <button type="button" class="btn btn-primary mx-auto">Đăng Nhập</button>
         </div>
+        <span class="row mb-3">
+          <span class="col-6"><a href="#" class="">Quên mật khẩu</a></span>
+          <span class="col-6 text-end ">
+            <input class="form-check-input" id="checkRenember" type="checkbox" checked="checked">
+            <label class="form-check-label" for="checkRenember">Ghi nhớ mật khẩu</label>
+          </span> 
+        </span>
+          <span class="row"><button type="button" class="btn btn-primary mb-3 mx-auto">Đăng Nhập</button></span>
           <h4 class="divider text-center"><span>Hoặc</span></h4>
           <div class="option-2 mb-3 row">
             <button type="button" class="btn login-google mb-3 mx-auto ">Đăng nhập bằng Google <ion-icon name="logo-google"></ion-icon></button>

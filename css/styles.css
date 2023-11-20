@@ -55,9 +55,6 @@ h4{
   font-size: 1.25rem;
 }
 
-.album-poster img{
-
-}
 /* SideBar */
 @media (max-width:991px){
   .sidebar{
@@ -350,35 +347,27 @@ form{
   width: 90%;
 }
 
-h1 {
+/* divider tag */
+h4{
   overflow: hidden;
-  text-align: center;
 }
-
-.qc-button button {
-  background-color: #04AA6D;
-  color: white;
-  padding: 16px 20px;
-  border: none;
-  cursor: pointer;
-  width: 49%;
-  opacity: 0.9;
-  display: inline;
-  margin-bottom: 0;
+h4::before, h4::after{
+  background-color: #000;
+  content: "";
+  display: inline-block;
+  height: 1px;
+  position: relative;
+  vertical-align: middle;
+  width: 50%;
 }
-
-.divider::before {
+h4::before {
   right: 0.5em;
   margin-left: -50%;
 }
-
-.qc-form * {
-  margin-bottom: 0.5rem;
-} 
-
-.qc-login{
-  width: 50%;
-  margin: 0 auto;
-  border: solid green 1px;
-  padding: 0.65em;
+h4::after {
+  left: 0.5em;
+  margin-right: -50%;
 }
+/*  */
+
+
