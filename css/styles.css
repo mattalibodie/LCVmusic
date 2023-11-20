@@ -360,7 +360,7 @@ form{
   vertical-align: middle;
   width: 50%;
 }
-.divider::before {.
+.divider::before {
   right: 0.5em;
   margin-left: -50%;
 }
