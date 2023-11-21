@@ -8,15 +8,15 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <link rel="preconnect" href="https://fonts.googleapis.com" />     <!-- Google Font -->
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+      <!-- Ionic Icon -->
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
     <link
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap"
       rel="stylesheet"
     />
     <script src="./js/jquery-3.7.1.min.js"></script>
-    <!-- loading screen css -->
-    <link rel="stylesheet" href="./css/loading.css">
     <script src="./js/script.js"></script>
-    <script src="./js/gallery.js"></script>
     <link rel="stylesheet" href="./css/styles.css">
     <!-- AweSome Font -->
     <script src="https://kit.fontawesome.com/2013436f4b.js" crossorigin="anonymous"></script>
@@ -69,113 +69,148 @@
             </div>
           </nav>
     </header>
-    <!-- Phần loading screen  -->
-    <!-- <div id="loader-wrapper">
-        <div id="loader"></div>
-        <div class="loader-section section-left"></div>
-        <div class="loader-section section-right"></div>
-    </div> -->
-    <div class="main">
-        <!-- Phần playlist -->
-        <div class="container">
-            <div class="">
-                <h3>Playlist</h3>
+    <div class="the-loai container">
+        <table class="table table-borderless table-responsive-md">
+            <thead>
+              <tr>
+                <th scope="col"><a href="#">Nhạc Việt</a></th>
+                <td scope="col"><a href="#">Rap</a></td>
+                <td scope="col"><a href="#">R&B</a></td>
+                <td scope="col"><a href="#">Pop</a></td>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="col"></th>
+                <td scope="col"><a href="#">Nhạc Trịnh</a></td>
+                <td scope="col"><a href="#">Ballad</a></td>
+                <td scope="col"><a href="#">EDM</a></td>
+              </tr>
+              <tr class="border-top border-dark-subtle">
+                <th scope="col"><a href="#">US-UK</a></th>
+                <td scope="col"><a href="#">Rap</a></td>
+                <td scope="col"><a href="#">R&B</a></td>
+                <td scope="col"><a href="#">Pop</a></td>
+              </tr>
+              <tr>
+                <th scope="col"></th>
+                <td scope="col"><a href="#">Rock</a></td>
+                <td scope="col"><a href="#">Nhạc Đồng Quê</a></td>
+                <td scope="col"><a href="#">Cổ điển</a></td>
+              </tr>
+            </tbody>
+          </table>
+    </div>
+    <div class="container">
+        <h1><a href="#"  class="header-text text-decoration-none">Bài Hát</a></h1>
+        <div class="row align border-top border-bottom">
+            <div class="img-thumb col-3 col-md-3 mt-3"><img src="./image/album/chungtacuahientai.jpg" alt=""></div>
+            <div class="col-6 col-md-6 my-auto">
+                <h6 onclick="playSong(this)" item="0">Chúng ta của hiện tại</h6>
+                <p>Sơn Tùng M-TP</p>  
             </div>
-                <div class="row">
-                    <div class="col-md">
-                        <a href="" class="album-poster">
-                            <img src="./image/album/demo_making_my_way.jpg" alt="">
-                        </a>
-                        <h4>Making My Way</h4>
-                        <p>Sơn Tùng M-TP</p>
-                    </div>
-                    <div class="col-md">
-                        <a href="" class="album-poster">
-                            <img src="./image/album/demo_making_my_way.jpg" alt="">
-                        </a>
-                        <h4>Making My Way</h4>
-                        <p>Sơn Tùng M-TP</p>
-                    </div>
-                    <div class="col-md">
-                        <a href="" class="album-poster">
-                            <img src="./image/album/demo_making_my_way.jpg" alt="">
-                        </a>
-                        <h4>Making My Way</h4>
-                        <p>Sơn Tùng M-TP</p>
-                    </div>
-                    <div class="col-md">
-                        <a href="" class="album-poster">
-                            <img src="./image/album/demo_making_my_way.jpg" alt="">
-                        </a>
-                        <h4>Making My Way</h4>
-                        <p>Sơn Tùng M-TP</p>
-                    </div>
-                    <div class="col-md">
-                        <a href="" class="album-poster">
-                            <img src="./image/album/demo_making_my_way.jpg" alt="">
-                        </a>
-                        <h4>Making My Way</h4>
-                        <p>Sơn Tùng M-TP</p>
-                    </div>
-                    <div class="col-md">
-                        <a href="" class="album-poster">
-                            <img src="./image/album/demo_making_my_way.jpg" alt="">
-                        </a>
-                        <h4>Making My Way</h4>
-                        <p>Sơn Tùng M-TP</p>
-                    </div>
-                </div>
-        </div>
-        <div class="container">
-            <div class="">
-                <h3>Playlist</h3>
+            <div class="icon col-3 col-md-3 d-flex my-auto justify-content-center">
+                <ion-icon name="heart-outline" onclick=""></ion-icon>
+                <ion-icon name="arrow-down-circle-outline" onclick=""></ion-icon>
+                <ion-icon name="share-social-outline" onclick=""></ion-icon>
             </div>
-                <div class="row">
-                    <div class="col-md">
-                        <a href="" class="album-poster">
-                            <img src="./image/album/demo_making_my_way.jpg" alt="">
-                        </a>
-                        <h4>Making My Way</h4>
-                        <p>Sơn Tùng M-TP</p>
-                    </div>
-                    <div class="col-md">
-                        <a href="" class="album-poster">
-                            <img src="./image/album/demo_making_my_way.jpg" alt="">
-                        </a>
-                        <h4>Making My Way</h4>
-                        <p>Sơn Tùng M-TP</p>
-                    </div>
-                    <div class="col-md">
-                        <a href="" class="album-poster">
-                            <img src="./image/album/demo_making_my_way.jpg" alt="">
-                        </a>
-                        <h4>Making My Way</h4>
-                        <p>Sơn Tùng M-TP</p>
-                    </div>
-                    <div class="col-md">
-                        <a href="" class="album-poster">
-                            <img src="./image/album/demo_making_my_way.jpg" alt="">
-                        </a>
-                        <h4>Making My Way</h4>
-                        <p>Sơn Tùng M-TP</p>
-                    </div>
-                    <div class="col-md">
-                        <a href="" class="album-poster">
-                            <img src="./image/album/demo_making_my_way.jpg" alt="">
-                        </a>
-                        <h4>Making My Way</h4>
-                        <p>Sơn Tùng M-TP</p>
-                    </div>
-                    <div class="col-md">
-                        <a href="" class="album-poster">
-                            <img src="./image/album/demo_making_my_way.jpg" alt="">
-                        </a>
-                        <h4>Making My Way</h4>
-                        <p>Sơn Tùng M-TP</p>
-                    </div>
-                </div>
         </div>
-
+        <div class="row align border-top border-bottom">
+            <div class="img-thumb col-3 col-md-3 mt-3"><img src="./image/album/demo_tungquen.jpg" alt=""></div>
+            <div class="col-6 col-md-6 my-auto">
+                <h6 onclick="playSong(this)" item="3">Từng Quen</h6>
+                <p>Wren Evans</p>  
+            </div>
+            <div class="icon col-3 col-md-3 d-flex my-auto justify-content-center">
+                <ion-icon name="heart-outline" onclick=""></ion-icon>
+                <ion-icon name="arrow-down-circle-outline" onclick=""></ion-icon>
+                <ion-icon name="share-social-outline" onclick=""></ion-icon>
+            </div>
+        </div>
+        <div class="row align border-top border-bottom">
+            <div class="img-thumb col-3 col-md-3 mt-3"><img src="./image/album/cafe-min.png" alt=""></div>
+            <div class="col-6 col-md-6 my-auto">
+                <h6 onclick="playSong(this)" item="4">Cà Phê</h6>
+                <p>Min</p>  
+            </div>
+            <div class="icon col-3 col-md-3 d-flex my-auto justify-content-center">
+                <ion-icon name="heart-outline" onclick=""></ion-icon>
+                <ion-icon name="arrow-down-circle-outline" onclick=""></ion-icon>
+                <ion-icon name="share-social-outline" onclick=""></ion-icon>
+            </div>
+        </div>
+        <div class="row align border-top border-bottom">
+            <div class="img-thumb col-3 col-md-3 mt-3"><img src="./image/album/demo_vu_doi_2023.jpg" alt=""></div>
+            <div class="col-6 col-md-6 my-auto">
+                <h6 onclick="playSong(this)" item="0">Đợi (2023 - Remake)</h6>
+                <p>Vũ.</p>  
+            </div>
+            <div class="icon col-3 col-md-3 d-flex my-auto justify-content-center">
+                <ion-icon name="heart-outline" onclick=""></ion-icon>
+                <ion-icon name="arrow-down-circle-outline" onclick=""></ion-icon>
+                <ion-icon name="share-social-outline" onclick=""></ion-icon>
+            </div>
+        </div>
+        <div class="row align border-top border-bottom">
+            <div class="img-thumb col-3 col-md-3 mt-3"><img src="https://i.scdn.co/image/ab67616d0000b27355c3c05165ab7672abe1194d" alt=""></div>
+            <div class="col-6 col-md-6 my-auto">
+                <h6><a href="https://youtu.be/IE02GRUWnOw">Tại vì sao</a></h6>
+                <p>MCK</p>  
+            </div>
+            <div class="icon col-3 col-md-3 d-flex my-auto justify-content-center">
+                <ion-icon name="heart-outline" onclick=""></ion-icon>
+                <ion-icon name="arrow-down-circle-outline" onclick=""></ion-icon>
+                <ion-icon name="share-social-outline" onclick=""></ion-icon>
+            </div>
+        </div>
+        <div class="row align border-top border-bottom">
+            <div class="img-thumb col-3 col-md-3 mt-3"><img src="https://i.scdn.co/image/ab67616d0000b27325e6b25d49687cd63f7a034e" alt=""></div>
+            <div class="col-6 col-md-6 my-auto">
+                <h6><a href="https://youtu.be/vPz8ftK_4bk">Đánh Đổi</a></h6>
+                <p>Đánh Đổi ft. MCK</p>  
+            </div>
+            <div class="icon col-3 col-md-3 d-flex my-auto justify-content-center">
+                <ion-icon name="heart-outline" onclick=""></ion-icon>
+                <ion-icon name="arrow-down-circle-outline" onclick=""></ion-icon>
+                <ion-icon name="share-social-outline" onclick=""></ion-icon>
+            </div>
+        </div>
+        <div class="row align border-top border-bottom">
+            <div class="img-thumb col-3 col-md-3 mt-3"><img src="https://i.scdn.co/image/ab67616d0000b2732dec0133eb6e5dd2ea17ebbb" alt=""></div>
+            <div class="col-6 col-md-6 my-auto">
+                <h6><a href="https://youtu.be/CdZN8PI3MqM">Ticking Away </a></h6>
+                <p>ft. Grabbitz & bbno$</p>  
+            </div>
+            <div class="icon col-3 col-md-3 d-flex my-auto justify-content-center">
+                <ion-icon name="heart-outline" onclick=""></ion-icon>
+                <ion-icon name="arrow-down-circle-outline" onclick=""></ion-icon>
+                <ion-icon name="share-social-outline" onclick=""></ion-icon>
+            </div>
+        </div>
+        <div class="row align border-top border-bottom">
+            <div class="img-thumb col-3 col-md-3 mt-3"><img src="https://i.scdn.co/image/ab67616d0000b27380fa19c17b362e26fd67fad8" alt=""></div>
+            <div class="col-6 col-md-6 my-auto">
+                <h6><a href="https://youtu.be/MiPs_TNp_-w">Flashbang dance</a></h6>
+                <p>The Verkkars-feat. n0thing</p>  
+            </div>
+            <div class="icon col-3 col-md-3 d-flex my-auto justify-content-center">
+                <ion-icon name="heart-outline" onclick=""></ion-icon>
+                <ion-icon name="arrow-down-circle-outline" onclick=""></ion-icon>
+                <ion-icon name="share-social-outline" onclick=""></ion-icon>
+            </div>
+        </div>
+        <div class="row align border-top border-bottom">
+            <div class="img-thumb col-3 col-md-3 mt-3"><img src="https://i.scdn.co/image/ab67616d0000b2737b84736a65e65bb631debcb5" alt=""></div>
+            <div class="col-6 col-md-6 my-auto">
+                <h6><a href="https://youtu.be/kPkT0jMjEu8">EZ4ENCE</a></h6>
+                <p>The Verkkars</p>  
+            </div>
+            <div class="icon col-3 col-md-3 d-flex my-auto justify-content-center">
+                <ion-icon name="heart-outline" onclick=""></ion-icon>
+                <ion-icon name="arrow-down-circle-outline" onclick=""></ion-icon>
+                <ion-icon name="share-social-outline" onclick=""></ion-icon>
+            </div>
+        </div>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
   </body>
