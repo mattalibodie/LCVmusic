@@ -30,6 +30,7 @@ body {
 .album-poster img{
   width: 100%;
   min-height: 10rem;
+  object-fit: cover;
 }
 
 @media (min-width:480px){
@@ -403,5 +404,15 @@ h6:hover, h6 > *:hover, td > *:hover{
   color: rgb(80, 80, 247);
 }
 /*  */
+/* ca_si.html */
+.card > .btn{
+  background: #F4C2D7;
+}
 
-
+.card > .btn:hover{
+  background-color: #A1C3D1;
+}
+.card{
+  width: 20rem;
+  background-color: #f1e8d9;
+}
