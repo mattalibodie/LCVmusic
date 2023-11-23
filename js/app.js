@@ -127,11 +127,14 @@ function handleChangeBar(){
     song.currentTime = rangeBar.value;
 }
 
+<<<<<<< HEAD
 function playSong(thisSong){
     localStorage.setItem("songID", thisSong.id);
     window.location.href = "playsong.html";
 }
 
+=======
+>>>>>>> 0936425455d799ee5a0af87a900f185674a3efbc
 function init(indexSong)
 {
     displayTimer();
@@ -142,3 +145,5 @@ function init(indexSong)
 }
 init(indexSong);
 timer = setInterval(displayTimer, 500);
+
+
