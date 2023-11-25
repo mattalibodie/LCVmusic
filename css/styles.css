@@ -416,3 +416,18 @@ h6:hover, h6 > *:hover, td > *:hover{
   width: 20rem;
   background-color: #f1e8d9;
 }
+
+/* Đa Ngôn Ngữ - MultiLang */
+.lang-opt{
+  font-size: 1.5rem;
+}
+.dropdown > *{
+  background-color: #A1C9F1;
+}
+.dropdown-item img{
+  width: 1.5rem;
+  height: 1.5rem;
+}
+ul.dropdown-menu.show, .button.dropdown-item{
+  width: 10px;
+}

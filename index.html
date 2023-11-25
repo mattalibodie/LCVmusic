@@ -1,25 +1,23 @@
 <!doctype html>
-<html lang="en">
-
+<html lang="">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" href="./image/shortcut_icon.png" />
-  <!-- Bootstrap CSS -->
-  <link rel="preconnect" href="https://fonts.googleapis.com" /> <!-- Google Font -->
+  <!-- Google Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" /> 
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet" />
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
-    crossorigin="anonymous"></script>
+  <!-- Bootstrap v5.3 -->
+  <link rel="stylesheet" href="./dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="./dist/js/bootstrap.bundle.js">
   <!-- Ionic Icon -->
   <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
   <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
   <script src="./js/jquery-3.7.1.min.js"></script>
   <!-- loading screen css -->
   <link rel="stylesheet" href="./css/loading.css">
+  <script src="./js/lang.js"></script> <!-- Object Multilang -->
   <script src="./js/script.js"></script>
   <link rel="stylesheet" href="./css/styles.css">
   <title>LCV Music</title>
@@ -27,6 +25,8 @@
 
 <body>
   <header>
+    <!-- Đa ngôn ngữ -->
+    <span id="language" class="d-flex justify-content-end"><a href="#" onclick="setLang('vi-VN')">VN|<a href="#" onclick="setLang('en-US')">EN</span>
     <nav class="navbar navbar-dark navbar-expand-md bg-transparent ">
       <div class="container-fluid">
         <a class="navbar-brand" href="./index.html">
@@ -45,218 +45,228 @@
                 width="50px" height="50px">LCV MUSIC</h5>
             <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
           </div>
+          <!-- Sidebar Body -->
           <div class="offcanvas-body d-flex flex-column flex-lg-row p-4 pg-lg-0">
             <ul class="navbar-nav justify-content-center align-items-center fs-5 flex-grow-1 pe-3">
               <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="./index.html">Trang Chủ</a>
+                <a class="nav-link active" aria-current="page" href="./index.html"><span id="MENU_HOME" class="multilang"></span></a>
               </li>
               <li class="nav-item mx-2">
-                <a class="nav-link " href="./bai_hat.html">Bài Hát</a>
+                <a class="nav-link " href="./bai_hat.html"><span id="MENU_SONGS" class="multilang"></span></a>
               </li>
               <li class="nav-item mx-2">
-                <a class="nav-link" href="ca_si.html">Ca Sĩ</a>
+                <a class="nav-link" href="ca_si.html"><span id="MENU_SINGERS" class="multilang"></span></a>
               </li>
               <li class="nav-item mx-2">
-                <a class="nav-link" href="#">Khám Phá</a>
+                <a class="nav-link" href="#"><span id="MENU_EXPLORE" class="multilang"></span></a>
               </li>
               <li class="nav-item mx-2">
-                <a class="nav-link" href="#">Liên Hệ</a>
+                <a class="nav-link" href="#"><span id="MENU_CONTACT" class="multilang"></span></a>
               </li>
             </ul>
-            <!-- Đăng Nhập & Đăng Ký -->
+            <!-- Đăng Nhập & Đăng Ký a.k.a Sidebar footer -->
             <div class="d-flex flex-column flex-lg-row justify-content-center align-items-center gap-1">
               <a href="./dangnhap.html" class="text-white text-decoration-none px-3 py-1 rounded-4"
-                style="background-color: #F172A1;">Đăng Nhập</a>
+                style="background-color: #F172A1;"><span id="MENU_LOGIN" class="multilang"></span></a>
               <a href="./dangky.html" class="text-white text-decoration-none px-3 py-1 rounded-4"
-                style="background-color: #A1C3D1;">Đăng Ký</a>
+                style="background-color: #A1C3D1;"><span id="MENU_SIGNIN" class="multilang"></span></a>
             </div>
           </div>
         </div>
       </div>
     </nav>
   </header>
-  <!-- Phần loading screen  -->
-  <div id="loader-wrapper">
-    <div id="loader"></div>
-    <div class="loader-section section-left"></div>
-    <div class="loader-section section-right"></div>
-  </div>
-  <div class="main">
-    <div class="container">
-      <div class="row-sm-2 row">
-        <!-- Carousel -->
-        <div class="slide-show col-md-9">
-          <div id="carouselAutoplaying" class="carousel slide" data-bs-ride="carousel">
-            <div class="carousel-indicators">
-              <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
-                aria-current="true" aria-label="Slide 1"></button>
-              <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
-                aria-label="Slide 2"></button>
-              <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
-                aria-label="Slide 3"></button>
-              <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="3"
-                aria-label="Slide 4"></button>
-              <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="4"
-                aria-label="Slide 5"></button>
+  <main>
+    <!-- Các trang khác không cần thiết nên tắt đi -->
+    <!-- Phần loading screen  -->
+    <!-- <div id="loader-wrapper">
+      <div id="loader"></div>
+      <div class="loader-section section-left"></div>
+      <div class="loader-section section-right"></div>
+    </div> -->
+    <div class="main">
+      <div class="container">
+        <div class="row-sm-2 row">
+          <!-- Carousel fade-show -->
+          <div class="slide-show col-md-9">
+            <div id="carouselAutoplaying" class="carousel slide" data-bs-ride="carousel">
+              <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
+                  aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
+                  aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
+                  aria-label="Slide 3"></button>
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="3"
+                  aria-label="Slide 4"></button>
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="4"
+                  aria-label="Slide 5"></button>
+              </div>
+              <div class="carousel-inner"> <!--Các thành phần trong carousel-->
+                <div class="carousel-item active">
+                  <img src="./image/slide_show/gallery.jpg" class="d-block w-100" alt="..."> <!--Ảnh 1-->
+                </div>
+                <div class="carousel-item">
+                  <img src="./image/slide_show/gallery1.jpg" class="d-block w-100" alt="..."> <!--Ảnh 2-->
+                </div>
+                <div class="carousel-item">
+                  <img src="./image/slide_show/gallery2.jpg" class="d-block w-100" alt="..."> <!--Ảnh 3-->
+                </div>
+                <div class="carousel-item">
+                  <img src="./image/slide_show/gallery3.jpg" class="d-block w-100" alt="..."> <!--Ảnh 4-->
+                </div>
+                <div class="carousel-item">
+                  <img src="./image/slide_show/gallery4.jpg" class="d-block w-100" alt="..."> <!--Ảnh 5-->
+                </div>
+              </div>
+              <!-- Các phím thay đổi chuyển động giữa các ảnh -->
+              <!-- Qua trái -->
+              <button class="carousel-control-prev" type="button" data-bs-target="#carouselAutoplaying"
+                data-bs-slide="prev"> 
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+              </button>
+              <!-- Qua phải -->
+              <button class="carousel-control-next" type="button" data-bs-target="#carouselAutoplaying"
+                data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+              </button>
             </div>
-            <div class="carousel-inner">
-              <div class="carousel-item active">
-                <img src="./image/slide_show/gallery.jpg" class="d-block w-100" alt="...">
-              </div>
-              <div class="carousel-item">
-                <img src="./image/slide_show/gallery1.jpg" class="d-block w-100" alt="...">
-              </div>
-              <div class="carousel-item">
-                <img src="./image/slide_show/gallery2.jpg" class="d-block w-100" alt="...">
-              </div>
-              <div class="carousel-item">
-                <img src="./image/slide_show/gallery3.jpg" class="d-block w-100" alt="...">
-              </div>
-              <div class="carousel-item">
-                <img src="./image/slide_show/gallery4.jpg" class="d-block w-100" alt="...">
-              </div>
-            </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#carouselAutoplaying"
-              data-bs-slide="prev">
-              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-              <span class="visually-hidden">Previous</span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#carouselAutoplaying"
-              data-bs-slide="next">
-              <span class="carousel-control-next-icon" aria-hidden="true"></span>
-              <span class="visually-hidden">Next</span>
-            </button>
           </div>
-        </div>
-        <div class="bxh col-md-3">
-          <ol>Gợi ý</ol>
-          <li>
-            <h4 onclick="playSong(this)" item="0" class="pointer-event">Making My Way</h4>
-            <p><a href="#">Sơn Tùng M-TP</a></p>
-          </li>
-          <li>
-            <h4 onclick="playSong(this)" item="3" class="pointer-event">Từng Quen</h4>
-            <p><a href="#">Wren Evans</a></p>
-          </li>
-          <li>
-            <h4 onclick="playSong(this)" item="6" class="pointer-event">Chúng ta của hiện tại</h4>
-            <p><a href="#">Sơn Tùng M-TP</a></p>
-          </li>
-          <li>
-            <h4 onclick="playSong(this)" item="5" class="pointer-event">Chúng Ta Của Hiện Tại</h4>
-            <p><a href="#">Sơn Tùng M-TP</a></p>
-          </li>
-          <li>
-            <h4 onclick="playSong(this)" item="4" class="pointer-event">Cà Phê</h4>
-            <p><a href="#">Min</a></p>
-          </li>
+          <!-- Danh mục gợi ý -->
+          <div class="bxh col-md-3">
+            <ol><span id="TABLE_SUGGEST" class="multilang"></span></ol>
+            <li>
+              <h4 onclick="playSong(this)" item="0" class="pointer-event">Making My Way</h4>
+              <p><a href="#">Sơn Tùng M-TP</a></p>
+            </li>
+            <li>
+              <h4 onclick="playSong(this)" item="3" class="pointer-event">Từng Quen</h4>
+              <p><a href="#">Wren Evans</a></p>
+            </li>
+            <li>
+              <h4 onclick="playSong(this)" item="6" class="pointer-event">Chúng ta của hiện tại</h4>
+              <p><a href="#">Sơn Tùng M-TP</a></p>
+            </li>
+            <li>
+              <h4 onclick="playSong(this)" item="5" class="pointer-event">Chúng Ta Của Hiện Tại</h4>
+              <p><a href="#">Sơn Tùng M-TP</a></p>
+            </li>
+            <li>
+              <h4 onclick="playSong(this)" item="4" class="pointer-event">Cà Phê</h4>
+              <p><a href="#">Min</a></p>
+            </li>
+          </div>
         </div>
       </div>
-    </div>
-    <!-- Phần playlist -->
-    <div class="container">
-      <div class="">
-        <h3>Playlist</h3>
+      <!-- Phần playlist -->
+      <div class="container">
+        <div class="">
+          <h3><span id="PLAYLIST_TITLE_1" class="multilang"></span></h3>
+        </div>
+        <div class="row">
+          <div class="col-4 col-md-2">
+            <div onclick="playSong(this)" item="0" class="album-poster">
+              <img src="./image/album/demo_making_my_way.jpg" alt="">
+            </div>
+            <h4>Making My Way</h4>
+            <p>Sơn Tùng M-TP</p>
+          </div>
+           <!--  funtion playSong trả về id của -->
+          <!-- bài hát là giá trị của item   -->
+          <div class="col-4 col-md-2">
+            <div onclick="playSong(this)" item="1" class="album-poster">
+              <img src="./image/album/troThanhPhuThue.jpg" alt="">        
+            </div>
+            <h4>Trở Thành Phu Thuê</h4>
+            <p>Hương Ly</p>
+          </div>
+          <div class="col-4 col-md-2">
+            <div onclick="playSong(this)" item="2" class="album-poster">
+              <img src="./image/album/demo_vu_doi_2023.jpg" alt="">
+              </a>
+            </div>
+            <h4>Đợi (2023-remake)</h4>
+            <p>Vũ.</p>
+          </div>
+          <div class="col-4 col-md-2">
+            <div onclick="playSong(this)" item="3" class="album-poster">
+              <img src="./image/album/demo_tungquen.jpg" alt="">
+            </div>
+            <h4>Từng Quen</h4>
+            <p>Wren Evans</p>
+          </div>
+          <div class="col-4 col-md-2">
+            <div onclick="playSong(this)" item="4" class="album-poster">
+              <img src="./image/album/cafe-min.png" alt="">
+            </div>
+            <h4>Cà Phê</h4>
+            <p>Min</p>
+          </div>
+          <div class="col-4 col-md-2">
+            <div onclick="playSong(this)" item="5" class="album-poster">
+              <img src="./image/album/chungtacuahientai.jpg" alt="">
+            </div>
+            <h4>Chúng Ta Của Hiện Tại</h4>
+            <p>Sơn Tùng M-TP</p>
+          </div>
+        </div>
       </div>
-      <div class="row">
-        <div class="col-4 col-md-2">
-          <div onclick="playSong(this)" item="0" class="album-poster">
-            <img src="./image/album/demo_making_my_way.jpg" alt="">
-          </div>
-          <h4>Making My Way</h4>
-          <p>Sơn Tùng M-TP</p>
+      <div class="container">
+        <div class="">
+          <h3><span id="PLAYLIST_TITLE_2" class="multilang"></span></h3>
         </div>
-        <div class="col-4 col-md-2">
-          <div onclick="playSong(this)" item="1" class="album-poster">
-            <img src="./image/album/troThanhPhuThue.jpg" alt="">
-          </div>
-          <h4>Trở Thành Phu Thuê</h4>
-          <p>Hương Ly</p>
-        </div>
-        <div class="col-4 col-md-2">
-          <div onclick="playSong(this)" item="2" class="album-poster">
-            <img src="./image/album/demo_vu_doi_2023.jpg" alt="">
+        <div class="row">
+          <div class="col-4 col-md-2">
+            <a href="https://youtu.be/nfs8NYg7yQM" class="album-poster">
+              <img src="https://i.scdn.co/image/ab67616d0000b273897f73256b9128a9d70eaf66" alt="">
             </a>
+            <h4>Attention</h4>
+            <p>Charlie Puth</p>
           </div>
-          <h4>Đợi (2023-remake)</h4>
-          <p>Vũ.</p>
-        </div>
-        <div class="col-4 col-md-2">
-          <div onclick="playSong(this)" item="3" class="album-poster">
-            <img src="./image/album/demo_tungquen.jpg" alt="">
+          <div class="col-4 col-md-2">
+            <a href="https://youtu.be/1i8WJ8cRWsE" class="album-poster">
+              <img src="https://i.scdn.co/image/ab67616d0000b27319aff2da63b211d75341e8eb" alt="">
+            </a>
+            <h4>Limbo</h4>
+            <p>Keshi</p>
           </div>
-          <h4>Từng Quen</h4>
-          <p>Wren Evans</p>
-        </div>
-        <div class="col-4 col-md-2">
-          <div onclick="playSong(this)" item="4" class="album-poster">
-            <img src="./image/album/cafe-min.png" alt="">
+          <div class="col-4 col-md-2">
+            <a href="https://youtu.be/jO2viLEW-1A" class="album-poster">
+              <img src="https://i.scdn.co/image/ab67616d0000b273e652883af4df2fca5d71a57a" alt="">
+            </a>
+            <h4>comethru </h4>
+            <p>Jeremy Zucker</p>
           </div>
-          <h4>Cà Phê</h4>
-          <p>Min</p>
-        </div>
-        <div class="col-4 col-md-2">
-          <div onclick="playSong(this)" item="5" class="album-poster">
-            <img src="./image/album/chungtacuahientai.jpg" alt="">
+          <div class="col-4 col-md-2">
+            <a href="https://youtu.be/VXzAJd8UJl8" class="album-poster">
+              <img src="https://i.scdn.co/image/ab67616d0000b27387bb1da05f3491eea3401de5" alt="">
+            </a>
+            <h4>At My Worst</h4>
+            <p>Pink Sweat$ </p>
           </div>
-          <h4>Chúng Ta Của Hiện Tại</h4>
-          <p>Sơn Tùng M-TP</p>
+          <div class="col-4 col-md-2">
+            <a href="https://youtu.be/D9G1VOjN_84" class="album-poster">
+              <img src="https://i.scdn.co/image/ab67616d0000b273aa597e50829169e6994eb403" alt="">
+            </a>
+            <h4>Enemy (with JID)</h4>
+            <p>Imagine Dragons</p>
+          </div>
+          <div class="col-4 col-md-2">
+            <a href="https://youtu.be/Y88LVU7MAe4" class="album-poster">
+              <img src="https://i.scdn.co/image/ab67616d0000b273e2e352d89826aef6dbd5ff8f" alt="">
+            </a>
+            <h4>What's Up Danger</h4>
+            <p>Blackway & Black Caviar</p>
+          </div>
         </div>
       </div>
     </div>
-    <div class="container">
-      <div class="">
-        <h3>US & UK</h3>
-      </div>
-      <div class="row">
-        <div class="col-4 col-md-2">
-          <a href="https://youtu.be/nfs8NYg7yQM" class="album-poster">
-            <img src="https://i.scdn.co/image/ab67616d0000b273897f73256b9128a9d70eaf66" alt="">
-          </a>
-          <h4>Attention</h4>
-          <p>Charlie Puth</p>
-        </div>
-        <div class="col-4 col-md-2">
-          <a href="https://youtu.be/1i8WJ8cRWsE" class="album-poster">
-            <img src="https://i.scdn.co/image/ab67616d0000b27319aff2da63b211d75341e8eb" alt="">
-          </a>
-          <h4>Limbo</h4>
-          <p>Keshi</p>
-        </div>
-        <div class="col-4 col-md-2">
-          <a href="https://youtu.be/jO2viLEW-1A" class="album-poster">
-            <img src="https://i.scdn.co/image/ab67616d0000b273e652883af4df2fca5d71a57a" alt="">
-          </a>
-          <h4>comethru </h4>
-          <p>Jeremy Zucker</p>
-        </div>
-        <div class="col-4 col-md-2">
-          <a href="https://youtu.be/VXzAJd8UJl8" class="album-poster">
-            <img src="https://i.scdn.co/image/ab67616d0000b27387bb1da05f3491eea3401de5" alt="">
-          </a>
-          <h4>At My Worst</h4>
-          <p>Pink Sweat$ </p>
-        </div>
-        <div class="col-4 col-md-2">
-          <a href="https://youtu.be/D9G1VOjN_84" class="album-poster">
-            <img src="https://i.scdn.co/image/ab67616d0000b273aa597e50829169e6994eb403" alt="">
-          </a>
-          <h4>Enemy (with JID)</h4>
-          <p>Imagine Dragons</p>
-        </div>
-        <div class="col-4 col-md-2">
-          <a href="https://youtu.be/Y88LVU7MAe4" class="album-poster">
-            <img src="https://i.scdn.co/image/ab67616d0000b273e2e352d89826aef6dbd5ff8f" alt="">
-          </a>
-          <h4>What's Up Danger</h4>
-          <p>Blackway & Black Caviar</p>
-        </div>
-      </div>
-    </div>
-  </div>
+  </main>
   <footer>
-    <p>Bản quyền thuộc về nhóm 8 - CT188-06</p>
-    <p>Các Thành Viên: Nguyễn Đặng Quốc Cường - Nguyễn Hải Lương - Huỳnh Long Vân</p>
+    <p><span id="FOOTER_TITLE1" class="multilang"></span></p>
+    <p><span id="FOOTER_TITLE2" class="multilang"></span></p>
     <p>Do not copyright &copy</p>
   </footer>
 </body>

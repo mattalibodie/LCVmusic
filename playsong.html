@@ -1,26 +1,30 @@
 <!doctype html>
 <html lang="en">
+
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="icon" href="./image/shortcut_icon.png" />
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-    <link rel="preconnect" href="https://fonts.googleapis.com" />     <!-- Google Font -->
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap"
-      rel="stylesheet"
-    />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet" />
+    <!-- Bootstrap v5.3 -->
+    <link rel="stylesheet" href="./dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./dist/js/bootstrap.bundle.js">
     <!-- Ionic Icon -->
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
     <script src="./js/jquery-3.7.1.min.js"></script>
-    <script src="./js/script.js"></script> <!-- script chuyen bai -->
-    <script src="./js/song.js"></script> <!-- Danh Sach Nhac -->
+    <!-- loading screen css -->
+    <link rel="stylesheet" href="./css/loading.css">
+    <script src="./js/lang.js"></script> <!-- Object Multilang -->
+    <script src="./js/script.js"></script>
+    <script src="./js/app.js"></script>
     <link rel="stylesheet" href="./css/styles.css">
     <title>LCV Music</title>
-  </head>
+</head>
+
 <body>
     <header>
         <nav class="navbar navbar-dark navbar-expand-md bg-transparent ">
@@ -87,7 +91,7 @@
                     <h4 class="music-name">Music Name</h4>
                     <h4 class="-">-</h4>
                     <h4 class="singer-name">Music Singer</h4>
-                </div>                   
+                </div>
                 <div class="music-footer">
                     <input type="range" name="range" id="range" class="range" />
                     <audio autoplay src="./music/making_my_way.mp3" id="song"></audio>
@@ -96,21 +100,21 @@
                         <div class="duration"></div>
                     </div>
                     <div class="controls">
-                      <ion-icon name="infinite-outline" class="play-infinite"></ion-icon>
-                      <div class="player-back">
-                        <ion-icon name="play-back" class="play-back"></ion-icon>
-                      </div>
-                      <div class="play">
-                        <div class="player-inner">
-                            <ion-icon name="pause-circle"></ion-icon>
+                        <ion-icon name="infinite-outline" class="play-infinite"></ion-icon>
+                        <div class="player-back">
+                            <ion-icon name="play-back" class="play-back"></ion-icon>
                         </div>
-                      </div>
-                      <div class="player-foward">
-                        <ion-icon name="play-forward" class="play-forward"></ion-icon>
-                      </div>
-                      <div>
-                        <ion-icon name="repeat-outline" class="play-repeat"></ion-icon>
-                      </div>
+                        <div class="play">
+                            <div class="player-inner">
+                                <ion-icon name="pause-circle"></ion-icon>
+                            </div>
+                        </div>
+                        <div class="player-foward">
+                            <ion-icon name="play-forward" class="play-forward"></ion-icon>
+                        </div>
+                        <div>
+                            <ion-icon name="repeat-outline" class="play-repeat"></ion-icon>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -140,15 +144,15 @@
                         <img src="./image/album/demo_vu_doi_2023.jpg" alt="">
                         </a>
                     </div>
-                        <h4>Đợi (2023-remake)</h4>
-                        <p>Vũ.</p>
+                    <h4>Đợi (2023-remake)</h4>
+                    <p>Vũ.</p>
                 </div>
                 <div class="col-4 col-md-2">
                     <div onclick="playSong(this)" item="3" class="album-poster">
                         <img src="./image/album/demo_tungquen.jpg" alt="">
                     </div>
-                        <h4>Từng Quen</h4>
-                        <p>Wren Evans</p>
+                    <h4>Từng Quen</h4>
+                    <p>Wren Evans</p>
                 </div>
                 <div class="col-4 col-md-2">
                     <div onclick="playSong(this)" item="4" class="album-poster">
@@ -164,58 +168,58 @@
                     <h4>Chúng Ta Của Hiện Tại</h4>
                     <p>Sơn Tùng M-TP</p>
                 </div>
-        </div>
             </div>
         </div>
-        <div class="container">
-            <div class="">
-                <h3>US & UK</h3>
+    </div>
+    <div class="container">
+        <div class="">
+            <h3>US & UK</h3>
+        </div>
+        <div class="row">
+            <div class="col-4 col-md-2">
+                <a href="https://youtu.be/nfs8NYg7yQM" class="album-poster">
+                    <img src="https://i.scdn.co/image/ab67616d0000b273897f73256b9128a9d70eaf66" alt="">
+                </a>
+                <h4>Attention</h4>
+                <p>Charlie Puth</p>
             </div>
-            <div class="row">
-                <div class="col-4 col-md-2">
-                    <a href="https://youtu.be/nfs8NYg7yQM" class="album-poster">
-                        <img src="https://i.scdn.co/image/ab67616d0000b273897f73256b9128a9d70eaf66" alt="">
-                    </a>
-                    <h4>Attention</h4>
-                    <p>Charlie Puth</p>
-                </div>
-                <div class="col-4 col-md-2">
-                    <a href="https://youtu.be/1i8WJ8cRWsE" class="album-poster">
-                        <img src="https://i.scdn.co/image/ab67616d0000b27319aff2da63b211d75341e8eb" alt="">
-                    </a>
-                    <h4>Limbo</h4>
-                    <p>Keshi</p>
-                </div>
-                <div class="col-4 col-md-2">
-                    <a href="https://youtu.be/jO2viLEW-1A" class="album-poster">
-                        <img src="https://i.scdn.co/image/ab67616d0000b273e652883af4df2fca5d71a57a" alt="">
-                    </a>
-                    <h4>comethru </h4>
-                    <p>Jeremy Zucker</p>
-                </div>
-                <div class="col-4 col-md-2">
-                    <a href="https://youtu.be/VXzAJd8UJl8" class="album-poster">
-                        <img src="https://i.scdn.co/image/ab67616d0000b27387bb1da05f3491eea3401de5" alt="">
-                    </a>
-                    <h4>At My Worst</h4>
-                    <p>Pink Sweat$  </p>
-                </div>
-                <div class="col-4 col-md-2">
-                    <a href="https://youtu.be/D9G1VOjN_84" class="album-poster">
-                        <img src="https://i.scdn.co/image/ab67616d0000b273aa597e50829169e6994eb403" alt="">
-                    </a>
-                    <h4>Enemy (with JID)</h4>
-                    <p>Imagine Dragons</p>
-                </div>
-                <div class="col-4 col-md-2">
-                    <a href="https://youtu.be/Y88LVU7MAe4" class="album-poster">
-                        <img src="https://i.scdn.co/image/ab67616d0000b273e2e352d89826aef6dbd5ff8f" alt="">
-                    </a>
-                    <h4>What's Up Danger</h4>
-                    <p>Blackway & Black Caviar</p>
-                </div>
+            <div class="col-4 col-md-2">
+                <a href="https://youtu.be/1i8WJ8cRWsE" class="album-poster">
+                    <img src="https://i.scdn.co/image/ab67616d0000b27319aff2da63b211d75341e8eb" alt="">
+                </a>
+                <h4>Limbo</h4>
+                <p>Keshi</p>
+            </div>
+            <div class="col-4 col-md-2">
+                <a href="https://youtu.be/jO2viLEW-1A" class="album-poster">
+                    <img src="https://i.scdn.co/image/ab67616d0000b273e652883af4df2fca5d71a57a" alt="">
+                </a>
+                <h4>comethru </h4>
+                <p>Jeremy Zucker</p>
+            </div>
+            <div class="col-4 col-md-2">
+                <a href="https://youtu.be/VXzAJd8UJl8" class="album-poster">
+                    <img src="https://i.scdn.co/image/ab67616d0000b27387bb1da05f3491eea3401de5" alt="">
+                </a>
+                <h4>At My Worst</h4>
+                <p>Pink Sweat$ </p>
+            </div>
+            <div class="col-4 col-md-2">
+                <a href="https://youtu.be/D9G1VOjN_84" class="album-poster">
+                    <img src="https://i.scdn.co/image/ab67616d0000b273aa597e50829169e6994eb403" alt="">
+                </a>
+                <h4>Enemy (with JID)</h4>
+                <p>Imagine Dragons</p>
+            </div>
+            <div class="col-4 col-md-2">
+                <a href="https://youtu.be/Y88LVU7MAe4" class="album-poster">
+                    <img src="https://i.scdn.co/image/ab67616d0000b273e2e352d89826aef6dbd5ff8f" alt="">
+                </a>
+                <h4>What's Up Danger</h4>
+                <p>Blackway & Black Caviar</p>
             </div>
         </div>
+    </div>
     </div>
     <footer>
         <p>Bản quyền thuộc về nhóm 8 - CT188-06</p>

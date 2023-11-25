@@ -55,7 +55,8 @@ window.addEventListener("DOMContentLoaded", (event) =>{
     
 });
 
-function changeStatus()
+// Thay đổi trạng thái của icon
+function changeStatus() 
 {
     if(isRepeat)
     {
@@ -84,15 +85,14 @@ function handleEndedSong() // Xử lí sau khi hết nhạc
 
 
 playBtn.addEventListener("click", playPause);
-
 function playPause(){ // nút play/pause
-    if(isPlaying){
+    if(isPlaying){ //Bài hát chưa được phát
         song.play();
         playBtn.innerHTML = '<ion-icon name="pause-circle"></ion-icon>'
         isPlaying = false;
         timer = setInterval(displayTimer, 500);
     }
-    else{
+    else{ //Bài hát đang được phát thì tạm dừng
         song.pause();
         playBtn.innerHTML = '<ion-icon name="play" class="play-icon"></ion-icon>'
         isPlaying = true;
@@ -115,7 +115,7 @@ function displayTimer(){ // Cập nhật dòng thời gian
         durationTime.textContent = formatTime(duration);
     }
 }
-function formatTime(number)
+function formatTime(number) //Thay đổi giá trị trả về của thời lượng bài hát để dễ theo dõi
 {
     const minutes = Math.floor(number/60);
     const seconds = Math.floor(number - minutes * 60);
@@ -123,11 +123,11 @@ function formatTime(number)
 }
 
 rangeBar.addEventListener("change", handleChangeBar);
-function handleChangeBar(){
+function handleChangeBar(){ //Tua Nhạc
     song.currentTime = rangeBar.value;
 }
 
-function init(indexSong)
+function init(indexSong) //Nhận id bài hát lưu trong id nhạc
 {
     displayTimer();
     song.setAttribute("src", `./music/${musics[indexSong].file}`);
@@ -135,7 +135,9 @@ function init(indexSong)
     musicName.textContent = musics[indexSong].title;
     singerName.textContent = musics[indexSong].singer;
 }
-init(indexSong);
-timer = setInterval(displayTimer, 500);
+$(document).ready(function(){
+    init(indexSong);
+    timer = setInterval(displayTimer, 500);
+})
 
 
