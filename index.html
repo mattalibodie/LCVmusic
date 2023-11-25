@@ -1,11 +1,12 @@
 <!doctype html>
 <html lang="">
+
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" href="./image/shortcut_icon.png" />
   <!-- Google Font -->
-  <link rel="preconnect" href="https://fonts.googleapis.com" /> 
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet" />
   <!-- Bootstrap v5.3 -->
@@ -26,7 +27,8 @@
 <body>
   <header>
     <!-- Đa ngôn ngữ -->
-    <span id="language" class="d-flex justify-content-end"><a href="#" onclick="setLang('vi-VN')">VN|<a href="#" onclick="setLang('en-US')">EN</span>
+    <span id="language" class="d-flex justify-content-end"><a href="#" onclick="setLang('vi-VN')">VN|<a href="#"
+          onclick="setLang('en-US')">EN</span>
     <nav class="navbar navbar-dark navbar-expand-md bg-transparent ">
       <div class="container-fluid">
         <a class="navbar-brand" href="./index.html">
@@ -49,7 +51,8 @@
           <div class="offcanvas-body d-flex flex-column flex-lg-row p-4 pg-lg-0">
             <ul class="navbar-nav justify-content-center align-items-center fs-5 flex-grow-1 pe-3">
               <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="./index.html"><span id="MENU_HOME" class="multilang"></span></a>
+                <a class="nav-link active" aria-current="page" href="./index.html"><span id="MENU_HOME"
+                    class="multilang"></span></a>
               </li>
               <li class="nav-item mx-2">
                 <a class="nav-link " href="./bai_hat.html"><span id="MENU_SONGS" class="multilang"></span></a>
@@ -79,11 +82,11 @@
   <main>
     <!-- Các trang khác không cần thiết nên tắt đi -->
     <!-- Phần loading screen  -->
-    <!-- <div id="loader-wrapper">
+    <div id="loader-wrapper">
       <div id="loader"></div>
       <div class="loader-section section-left"></div>
       <div class="loader-section section-right"></div>
-    </div> -->
+    </div>
     <div class="main">
       <div class="container">
         <div class="row-sm-2 row">
@@ -122,7 +125,7 @@
               <!-- Các phím thay đổi chuyển động giữa các ảnh -->
               <!-- Qua trái -->
               <button class="carousel-control-prev" type="button" data-bs-target="#carouselAutoplaying"
-                data-bs-slide="prev"> 
+                data-bs-slide="prev">
                 <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                 <span class="visually-hidden">Previous</span>
               </button>
@@ -173,11 +176,11 @@
             <h4>Making My Way</h4>
             <p>Sơn Tùng M-TP</p>
           </div>
-           <!--  funtion playSong trả về id của -->
+          <!--  funtion playSong trả về id của -->
           <!-- bài hát là giá trị của item   -->
           <div class="col-4 col-md-2">
             <div onclick="playSong(this)" item="1" class="album-poster">
-              <img src="./image/album/troThanhPhuThue.jpg" alt="">        
+              <img src="./image/album/troThanhPhuThue.jpg" alt="">
             </div>
             <h4>Trở Thành Phu Thuê</h4>
             <p>Hương Ly</p>
@@ -270,4 +273,5 @@
     <p>Do not copyright &copy</p>
   </footer>
 </body>
+
 </html>
