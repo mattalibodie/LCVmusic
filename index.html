@@ -21,6 +21,7 @@
   <script src="./js/lang.js"></script> <!-- Object Multilang -->
   <script src="./js/script.js"></script>
   <link rel="stylesheet" href="./css/styles.css">
+  <link rel="icon" href="./image/music-svgrepo-com.svg">
   <title>LCV Music</title>
 </head>
 
@@ -29,6 +30,7 @@
     <!-- Đa ngôn ngữ -->
     <span id="language" class="d-flex justify-content-end"><a href="#" onclick="setLang('vi-VN')">VN|<a href="#"
           onclick="setLang('en-US')">EN</span>
+    <!-- Offcanvas Navbar  https://getbootstrap.com/docs/5.3/components/navbar/  -->
     <nav class="navbar navbar-dark navbar-expand-md bg-transparent ">
       <div class="container-fluid">
         <a class="navbar-brand" href="./index.html">
@@ -81,7 +83,7 @@
   </header>
   <main>
     <!-- Các trang khác không cần thiết nên tắt đi -->
-    <!-- Phần loading screen  -->
+    <!-- Phần preloading screen   chi tiết: https://ihatetomatoes.net/create-custom-preloading-screen/  -->
     <div id="loader-wrapper">
       <div id="loader"></div>
       <div class="loader-section section-left"></div>
@@ -90,7 +92,7 @@
     <div class="main">
       <div class="container">
         <div class="row-sm-2 row">
-          <!-- Carousel fade-show -->
+          <!-- Carousel   chi tiết: https://getbootstrap.com/docs/4.0/components/carousel/ -->
           <div class="slide-show col-md-9">
             <div id="carouselAutoplaying" class="carousel slide" data-bs-ride="carousel">
               <div class="carousel-indicators">
@@ -165,7 +167,7 @@
       </div>
       <!-- Phần playlist -->
       <div class="container">
-        <div class="">
+        <div>
           <h3><span id="PLAYLIST_TITLE_1" class="multilang"></span></h3>
         </div>
         <div class="row">
