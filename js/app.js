@@ -15,12 +15,6 @@ let indexSong = localStorage.getItem("songID");
 
 let isRepeat = false;
 let repeatCount = 0;
-// const musics = ["Lover_TaylorSwift.mp3", 
-//                 "making_my_way.mp3", 
-//                 "TroThanhPhuThe-HuongLy-10710826.mp3", 
-//                 "VuonNha-PhanManhQuynh-9777057.mp3", 
-//                 "WeDontTalkAnymore.mp3"];
-
 
 function changeSong(dir){
     if(dir == 1){

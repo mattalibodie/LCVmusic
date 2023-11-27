@@ -52,7 +52,7 @@ p {
 }
 
 h4 {
-  font-size: 1.25rem;
+  font-size: 1.25rem; 
 }
 
 /* Responsive Img */
@@ -61,7 +61,6 @@ h4 {
     min-height: 6rem;
   }
 }
-
 /* SideBar */
 @media (max-width:991px) {
   .sidebar {
