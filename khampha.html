@@ -1,0 +1,285 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" href="./image/shortcut_icon.png" />
+  <!-- Bootstrap CSS -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <!-- Google Font -->
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+    crossorigin="anonymous"></script>
+  <!-- Ionic Icon -->
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+  <script src="./js/jquery-3.7.1.min.js"></script>
+  <!-- loading screen css -->
+  <link rel="stylesheet" href="./css/loading.css">
+  <script src="./js/script.js"></script>
+  <link rel="stylesheet" href="./css/styles.css">
+  <title>LCV Music</title>
+</head>
+
+<body>
+  <header>
+    <nav class="navbar navbar-dark navbar-expand-md bg-transparent ">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="./index.html">
+          <img src="./image/music-svgrepo-com.svg" alt width="50px" height="50px">LCV MUSIC
+        </a>
+        <!-- BUTTON -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
+          aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="sidebar offcanvas offcanvas-start" tabindex="-1" id="offcanvasNavbar"
+          aria-labelledby="offcanvasNavbarLabel">
+          <!-- Sidebar header -->
+          <div class="offcanvas-header text-white border-botton">
+            <h5 class="offcanvas-title" id="offcanvasNavbarLabel"><img src="./image/music-svgrepo-com.svg" alt
+                width="50px" height="50px">LCV MUSIC</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body d-flex flex-column flex-lg-row p-4 pg-lg-0">
+            <ul class="navbar-nav justify-content-center align-items-center fs-5 flex-grow-1 pe-3">
+              <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="./index.html">Trang Chủ</a>
+              </li>
+              <li class="nav-item mx-2">
+                <a class="nav-link " href="./bai_hat.html">Bài Hát</a>
+              </li>
+              <li class="nav-item mx-2">
+                <a class="nav-link" href="./ca_si.html">Ca Sĩ</a>
+              </li>
+              <li class="nav-item mx-2">
+                <a class="nav-link active" href="./khampha.html">Khám Phá</a>
+              </li>
+              <li class="nav-item mx-2">
+                <a class="nav-link" href="./lienhe.html">Liên Hệ</a>
+              </li>
+            </ul>
+            <!-- Đăng Nhập & Đăng Ký -->
+            <div class="d-flex flex-column flex-lg-row justify-content-center align-items-center gap-1">
+              <a href="./dangnhap.html" class="text-white text-decoration-none px-3 py-1 rounded-4"
+                style="background-color: #F172A1;">Đăng Nhập</a>
+              <a href="./dangky.html" class="text-white text-decoration-none px-3 py-1 rounded-4"
+                style="background-color: #A1C3D1;">Đăng Ký</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </header>
+  <!-- Phần loading screen  -->
+  <div class="main">
+    <div class="container">
+      <div class="row-sm-2 row">
+        <!-- Carousel -->
+        <div class="slide-show col-md-7">
+          <div id="carouselAutoplaying" class="carousel slide" data-bs-ride="carousel">
+
+            <!-- Tin chạy-->
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="./image/tintuc/huongly.jpg" class="d-block w-100" alt="...">
+                <h4> <a
+                    href="https://60giay.com/huong-ly-lot-xac-tren-san-khau-chi-dep-dap-gio-re-song-d28672.html">Hương
+                    Ly ‘lột xác’ trên sân khấu ‘Chị đẹp đạp gió rẽ sóng’</a></h4>
+              </div>
+              <div class="carousel-item">
+                <img src="./image/tintuc/tintuc2.png" class="d-block w-100" alt="...">
+                <h4><a
+                    href="https://hoahoctro.tienphong.vn/netizen-kinh-ngac-nhan-ra-diem-chung-cua-dan-tan-binh-den-tu-4-ong-lon-k-pop-post1589302.tpo">Netizen
+                    kinh ngạc nhận ra điểm chung của dàn tân binh đến từ 4
+                    "ông lớn" K-Pop</a></h4>
+              </div>
+              <div class="carousel-item">
+                <img src="./image/tintuc/tintuc3.jpg" class="d-block w-100" alt="...">
+                <h4> <a
+                    href="https://www.saostar.vn/am-nhac/man-trinh-dien-cua-thuy-chi-khien-ai-nghe-cung-roi-nuoc-mat-202311221709437903.html">Màn
+                    trình diễn của Thùy Chi khiến ai nghe cũng lặng người, rơi
+                    nước mắt: Ca khúc tưởng lạ mà quen!</a></h4>
+              </div>
+              <div class="carousel-item">
+                <img src="./image/tintuc/tintuc4a.webp" class="d-block w-100" alt="...">
+                <h4><a
+                    href="https://www.saostar.vn/am-nhac/bat-ngo-gi-dang-cho-sky-tai-concert-co-son-tung-m-tp-duoc-to-chuc-202311231153284211.html">Bất
+                    ngờ gì đang chờ Sky tại concert có Sơn Tùng M-TP được tổ
+                    chức đúng sinh nhật của Sky?</a></h4>
+              </div>
+              <div class="carousel-item">
+                <img src="./image/tintuc/tintuc5a.webp" class="d-block w-100" alt="...">
+                <h4><a
+                    href="https://www.saostar.vn/am-nhac/tempest-ve-viet-nam-bieu-dien-mot-thanh-vien-lo-hen-202311230000485887.html">TEMPEST
+                    cùng Hanbin Ngô Ngọc Hưng về Việt Nam biểu diễn, một thành
+                    viên lỡ hẹn đầy tiếc nuối</a></h4>
+              </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselAutoplaying"
+              data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselAutoplaying"
+              data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+        </div>
+        <!--BẢNG TIN-->
+        <div class="bxh col-md-5 mb-3">
+          <!--DÒng 1-->
+          <div class="row w-100 h-25 my-3">
+            <div class="col-4 col-md-4 mb-3">
+              <a href="https://www.yan.vn/thien-nhien-viet-nam-hung-vi-trong-mv-moi-cua-masew-330783.html">
+                <img src="./image/tintuc/bt1.jpg" class="img-fluid" alt>
+              </a>
+            </div>
+            <div class="col-8 col-md-8">
+              <h4> 
+                <a href="https://www.yan.vn/thien-nhien-viet-nam-hung-vi-trong-mv-moi-cua-masew-330783.html">
+                  Thiên nhiên Việt Nam hùng vĩ trong MV mới của MASEW
+                </a>
+              </h4>
+            </div>
+          </div>
+          <!--DÒng 2-->
+          <div class="row w-100 h-25 mb-3 ">
+            <div class="col-4 col-md-4">
+              <a href="https://www.yan.vn/hoang-thuy-linh-linh-khong-co-gi-ngoai-tinh-yeu-va-am-nhac-330504.html">
+                <img src="./image/tintuc/bt2.jpg" class="img-fluid " alt>
+              </a>
+            </div>
+            <div class="col-8 col-md-8 ">
+              <h4> <a
+                  href="https://www.yan.vn/hoang-thuy-linh-linh-khong-co-gi-ngoai-tinh-yeu-va-am-nhac-330504.html">Hoàng
+                  Thuỳ Linh: "Linh không có gì ngoài tình yêu và âm nhạc</a>
+              </h4>
+            </div>
+          </div>
+          <!--DÒNG 3-->
+          <div class="row w-100 h-25 ">
+            <div class="col-4 col-md-4">
+              <a
+                href="https://www.yan.vn/mv-dai-minh-tinh-cua-van-mai-huong-leo-thang-top-1-itunes-viet-nam-330455.html">
+                <img src="./image/tintuc/bt3.jpg" class="img-fluid w-100" alt>
+              </a>
+            </div>
+            <div class="col-8 col-md-8 ">
+              <h4> <a
+                  href="https://www.yan.vn/mv-dai-minh-tinh-cua-van-mai-huong-leo-thang-top-1-itunes-viet-nam-330455.html">MV
+                  “Đại Minh Tinh” của Văn Mai Hương leo thẳng Top 1 iTunes Việt Nam</a>
+              </h4>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Phần VPOP -->
+    <div class="container">
+      <div class>
+        <h3>VPOP</h3>
+      </div>
+      <div class="d-flex flex-column flex-md-row">
+        <!-- ô 1 -->
+        <div class="w-100">
+          <a
+            href="https://kenh14.vn/chung-ket-ca-si-mat-na-mua-2-5-ca-khuc-moi-trinh-lang-1-mascot-phai-lo-dien-20231124110029328.chn">
+            <img src="./image/tintuc/vpop1.webp" class="img-fluid Vpop1" alt>
+          </a>
+          <h4> <a
+              href="https://kenh14.vn/chung-ket-ca-si-mat-na-mua-2-5-ca-khuc-moi-trinh-lang-1-mascot-phai-lo-dien-20231124110029328.chn">Chung
+              kết Ca Sĩ Mặt Nạ mùa 2: 5 ca khúc mới trình làng, 1 mascot phải
+              lộ diện</a></h4>
+          <p>Musik-1 ngày trước</p>
+        </div>
+        <!--Ô2-->
+        <div class="w-100">
+          <a
+            href="https://kenh14.vn/min-dich-than-lam-giam-doc-sang-tao-cho-album-cua-1-nam-ca-si-la-ai-ma-duoc-uu-ai-den-muc-nay-2023112211185065.chn">
+            <img src="./image/tintuc/vpop2.webp" class="img-fluid Vpop1" alt>
+          </a>
+          <h4><a
+              href="https://kenh14.vn/min-dich-than-lam-giam-doc-sang-tao-cho-album-cua-1-nam-ca-si-la-ai-ma-duoc-uu-ai-den-muc-nay-2023112211185065.chn">
+              MIN đích thân làm giám đốc sáng tạo cho album của 1 nam ca sĩ,
+              là ai mà được ưu ái đến mức này? </a></h4>
+          <p>Musik-3 ngày trước</p>
+        </div>
+        <!--Ô3-->
+        <div class="w-100">
+          <a
+            href="https://kenh14.vn/my-tam-ban-het-toan-bo-ve-dem-nhac-tai-ha-long-chi-sau-30-phut-20231120102754701.chn">
+            <img src="./image/tintuc/vpop3.webp" class="img-fluid Vpop1" alt></a>
+
+          <a
+            href="https://kenh14.vn/my-tam-ban-het-toan-bo-ve-dem-nhac-tai-ha-long-chi-sau-30-phut-20231120102754701.chn">
+            <h4>Mỹ
+              Tâm bán hết toàn bộ vé đêm nhạc tại Hạ Long chỉ sau 30 phút!</h4>
+          </a>
+          <p>Musik-5 ngày trước</p>
+        </div>
+      </div>
+      <!-- TIN TUC KPOP-->
+
+      <div>
+        <h3>KPOP</h3>
+      </div>
+      <div class="d-flex flex-column flex-md-row ">
+        <!-- ô 1 -->
+        <div class="w-100">
+
+          <a
+            href="https://kenh14.vn/bat-ngo-thong-bao-nhap-ngu-jung-kook-khien-knet-tiec-nuoi-vi-phai-tam-dung-su-nghiep-dang-o-dinh-cao-20231123204308639.chn">
+            <img src="./image/tintuc/kpop1.webp" class="img-fluid Vpop1 " alt="">
+          </a>
+          <h4> <a
+              href="https://kenh14.vn/bat-ngo-thong-bao-nhap-ngu-jung-kook-khien-knet-tiec-nuoi-vi-phai-tam-dung-su-nghiep-dang-o-dinh-cao-20231123204308639.chn">
+              Bất ngờ thông báo nhập ngũ, Jung Kook khiến Knet tiếc nuối vì phải tạm dừng sự nghiệp đang ở đỉnh cao
+            </a></h4>
+          <p>Musik-1 ngày trước</p>
+        </div>
+        <!--Ô2-->
+        <div class="mx-2 w-100">
+          <a
+            href="https://kenh14.vn/ban-nhac-hoang-gia-anh-vinh-danh-blackpink-tai-cung-dien-buckingham-20231123165112107.chn">
+            <img src="./image/tintuc/kpop2.webp" class="img-fluid Vpop1  " alt>
+          </a>
+          <h4><a
+              href="https://kenh14.vn/ban-nhac-hoang-gia-anh-vinh-danh-blackpink-tai-cung-dien-buckingham-20231123165112107.chn">
+              Ban nhạc Hoàng gia Anh vinh danh BLACKPINK tại Cung điện Buckingham </a></h4>
+          <p>Musik-1 ngày trước</p>
+        </div>
+        <!--Ô3-->
+        <div class="mx-2 w-100">
+          <a href="https://kenh14.vn/ky-nguyen-cua-nghe-si-solo-k-pop-tu-do-the-hien-su-sang-tao-20231118134449451.chn">
+            <img src="./image/tintuc/kpop3.webp" class="img-fluid Vpop1 " alt></a>
+
+          <a href="https://kenh14.vn/ky-nguyen-cua-nghe-si-solo-k-pop-tu-do-the-hien-su-sang-tao-20231118134449451.chn">
+            <h4>
+              Kỷ nguyên của nghệ sĩ solo K-Pop: Tự do thể hiện sự sáng tạo </h4>
+          </a>
+          <p>Musik-5 ngày trước</p>
+        </div>
+      </div>
+    </div>
+    <!--TIN TUC KPOP-->
+
+
+
+
+    <footer>
+      <p>Bản quyền thuộc về nhóm 8 - CT188-06</p>
+      <p>Các Thành Viên: Nguyễn Đặng Quốc Cường - Nguyễn Hải Lương - Huỳnh
+        Long Vân</p>
+      <p>Do not copyright &copy</p>
+    </footer>
+</body>
+
+</html>

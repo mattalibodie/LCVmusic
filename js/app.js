@@ -36,6 +36,7 @@ function changeSong(dir){
     init(indexSong);
     playPause();
 }
+
 window.addEventListener("DOMContentLoaded", (event) =>{
     nextBtn.addEventListener("click", function(){
         changeSong(1);
@@ -49,7 +50,18 @@ window.addEventListener("DOMContentLoaded", (event) =>{
     
 });
 
-// Thay đổi trạng thái của icon
+function handleEndedSong() // Xử lí sau khi hết nhạc
+{
+    if(isRepeat) //lặp lại
+    {
+        isPlaying = true;
+        playPause();
+    }
+    else{
+        changeSong(1);
+    }
+}
+// Cập nhật css icon khi thay nhấn vào
 function changeStatus() 
 {
     if(isRepeat)
@@ -63,34 +75,19 @@ function changeStatus()
         playRepeat.style.color = "#ffffff";
     }
 }
-
-
-function handleEndedSong() // Xử lí sau khi hết nhạc
-{
-    if(isRepeat) //lặp lại
-    {
-        isPlaying = true;
-        playPause();
-    }
-    else{
-        changeSong(1);
-    }
-}
-
-
 playBtn.addEventListener("click", playPause);
 function playPause(){ // nút play/pause
     if(isPlaying){ //Bài hát chưa được phát
         song.play();
-        playBtn.innerHTML = '<ion-icon name="pause-circle"></ion-icon>'
+        playBtn.innerHTML = '<ion-icon name="pause-circle"></ion-icon>' // Cập nhật icon pause
         isPlaying = false;
         timer = setInterval(displayTimer, 500);
     }
     else{ //Bài hát đang được phát thì tạm dừng
         song.pause();
-        playBtn.innerHTML = '<ion-icon name="play" class="play-icon"></ion-icon>'
+        playBtn.innerHTML = '<ion-icon name="play" class="play-icon"></ion-icon>' // Cập nhật icon play
         isPlaying = true;
-        clearInterval(timer);
+        clearInterval(timer); // Tạm dừng bộ đếm thời gian
     }
 }
 
@@ -109,7 +106,7 @@ function displayTimer(){ // Cập nhật dòng thời gian
         durationTime.textContent = formatTime(duration);
     }
 }
-function formatTime(number) //Thay đổi giá trị trả về của thời lượng bài hát để dễ theo dõi
+function formatTime(number) // Định dạng dòng thời gian về dạng 00:00 để người dùng dễ theo dõi
 {
     const minutes = Math.floor(number/60);
     const seconds = Math.floor(number - minutes * 60);

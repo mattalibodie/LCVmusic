@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="./image/shortcut_icon.png" />
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet" />
+    <script src="./js/jquery-3.7.1.min.js"></script>
+    <link rel="stylesheet" href="./css/styles.css">
+    <title>LCV Music</title>
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-dark navbar-expand-md bg-transparent ">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="./index.html">
+                    <img src="./image/music-svgrepo-com.svg" alt width="50px" height="50px">LCV MUSIC
+                </a>
+                <!-- BUTTON -->
+                <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas"
+                    data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="sidebar offcanvas offcanvas-start" tabindex="-1" id="offcanvasNavbar"
+                    aria-labelledby="offcanvasNavbarLabel">
+                    <!-- Sidebar header -->
+                    <div class="offcanvas-header text-white border-botton">
+                        <h5 class="offcanvas-title" id="offcanvasNavbarLabel"><img src="./image/music-svgrepo-com.svg"
+                                alt width="50px" height="50px">LCV MUSIC</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                    </div>
+                    <div class="offcanvas-body d-flex flex-column flex-lg-row p-4 pg-lg-0">
+                        <ul class="navbar-nav justify-content-center align-items-center fs-5 flex-grow-1 pe-3">
+                            <li class="nav-item">
+                                <a class="nav-link" aria-current="page" href="./index.html">Trang Chủ</a>
+                            </li>
+                            <li class="nav-item mx-2">
+                                <a class="nav-link" href="./bai_hat.html">Bài
+                                    Hát</a>
+                            </li>
+                            <li class="nav-item mx-2">
+                                <a class="nav-link" href="ca_si.html">Ca Sĩ</a>
+                            </li>
+                            <li class="nav-item mx-2">
+                                <a class="nav-link" href="khampha.html">Khám Phá</a>
+                            </li>
+                            <li class="nav-item mx-2">
+                                <a class="nav-link active" href="./lienhe.html">Liên Hệ</a>
+                            </li>
+                        </ul>
+                        <!-- Lien hệ -->
+                        <div class="d-flex flex-column flex-lg-row justify-content-center align-items-center gap-1">
+                            <a href="./dangnhap.html" class="text-white text-decoration-none px-3 py-1 rounded-4"
+                                style="background-color: #F172A1;">Đăng nhập</a>
+                            <a href="./dangky.html" class="text-white text-decoration-none px-3 py-1 rounded-4"
+                                style="background-color: #A1C3D1;">Đăng ký</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <div class="row">
+            <div class="col-md-6 text-center mt-2">
+                <h2>Bạn cần hỗ trợ?</h2>
+                <img src="./image/Lienhe.png" class="img-fluid" alt="">
+            </div>
+            <div class="col-md-5">
+                <div class="container form-login d-lg-flex justify-content-center align-content-center">
+                    <form action="#" method="post" class="needs-validation" novalidate>
+                        <h2 class="text-center m-3">Liên Hệ</h2>
+                        <!-- Họ và tên -->
+                        <div class="mb-3 row">
+                            <label for="inputUsername" class="col-sm-3 col-form-label">Họ và tên</label>
+                            <div class="col-sm-9">
+                                <input type="text" class="form-control " id="inputUsername" placeholder="Nhập họ và tên"
+                                    required>
+                            </div>
+                        </div>
+                        <!--Email-->
+                        <div class="mb-3 row">
+                            <label for="inputEmail" class="col-sm-3 col-form-label">Email</label>
+                            <div class="col-sm-9">
+                                <input type="email" class="form-control" id="inputEmail" placeholder="email@example.com"
+                                    required>
+                                <div class="invalid-feedback">Tên email không hợp lệ</div>
+                            </div>
+                        </div>
+                        <!--SDT-->
+                        <div class="mb-3 row">
+                            <label for="sdt" class="col-sm-3 col-form-label mb-3">Số
+                                điện thoại</label>
+                            <div class="col-sm-9">
+                                <input type="text" class="form-control" id="sdt" placeholder="Nhập số điện thoại"
+                                    required>
+                            </div>
+                        </div>
+                        <!--Chọn vấn đề-->
+                        <div class="mb-3 row">
+                            <label for="contact_type" class="col-sm-3 col-form-label mb-3">Chọn</label>
+                            <div class="col-sm-9">
+                                <select name="contact_type" class="form-control" id="contact_type" required>
+                                    <option value="">Vấn đề cần liên hệ</option>
+                                    <option value="1">Báo lỗi</option>
+                                    <option value="2">Góp ý sản phẩm</option>
+                                    <option value="3">Gia hạn, nâng cấp tài
+                                        khoản Plus/ Premium</option>
+                                    <option value="4">Phát hành nội dung</option>
+                                    <option value="5">Hợp tác nội dung</option>
+                                    <option value="6">Tài khoản người dùng</option>
+                                    <option value="6">Vấn đề khác</option>
+                                </select>
+                            </div>
+                        </div>
+                        <!--Nhập nội dung-->
+                        <div class="row mb-3">
+                            <label for="ND" class="col-sm-3 col-form-label mb-3">Nội dung</label>
+                            <div class="col-sm-9">
+                                <textarea class="form-control" id="ND" placeholder="Nhập nội dung" required></textarea>
+                            </div>
+                            <div class="invalid-feedback">Vui lòng không để trống mục này</div>
+                        </div>
+                        <div class="d-flex flex-column align-items-center">
+                            <button type="submit" class="btn btn-primary mb-3 mx-auto">Gửi liên hệ</button>
+                            <p>
+                                Chúng tôi luôn ghi nhận những đóng góp ý kiến của bạn để cải tiến và nâng cấp
+                                sản phẩm LCV Music ngày một hoàn thiện và hữu ích hơn.
+                            </p>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <p>Bản quyền thuộc về nhóm 8 - CT188-06</p>
+        <p>Các Thành Viên: Nguyễn Đặng Quốc Cường - Nguyễn Hải Lương -
+            Huỳnh Long Vân</p>
+        <p>Do not copyright &copy</p>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+    <script src="./js/script.js"></script>
+</body>
+
+</html>
